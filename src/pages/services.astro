@@ -1,7 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
+const CAL_BASE = "https://cal.com/isabella-rondon-jrkvbh/30min";
+const CAL_FIELD = "What-s-your-main-challenge--What-are-you-working-on";
+
+function calLink(service: string) {
+  return `${CAL_BASE}?${CAL_FIELD}=${encodeURIComponent(`Interested in: ${service}. `)}`;
+}
 
 const services = [
   {
@@ -151,7 +156,7 @@ const faqs = [
             <div class="svc-result">{s.result}</div>
           </div>
           <div class="svc-cta-col">
-            <a href={CAL_URL} class="svc-cta-link" target="_blank" rel="noopener">Book a call →</a>
+            <a href={calLink(s.name)} class="svc-cta-link" target="_blank" rel="noopener">Book a call →</a>
           </div>
         </div>
       ))}
