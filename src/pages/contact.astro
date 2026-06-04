@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Hire a Freelance Data Analyst for Startups | Isabella Rondon"
+  description="Ready to hire a data analyst? Book a 30-minute data analyst consultation with Isabella Rondon — freelance data analyst for early-stage startups. No commitment. Just clarity."
+>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="section-label">Contact</div>
+      <h1>Hire a Freelance<br><span class="accent-light">Data Analyst</span></h1>
+      <p>Book a 30-minute discovery call and we'll figure out exactly what you need — and whether I'm the right person to build it.</p>
+    </div>
+  </header>
+
+  <!-- CONTACT BODY -->
+  <section class="contact-section">
+    <div class="contact-grid">
+
+      <!-- LEFT: Cal.com embed -->
+      <div class="contact-cal">
+        <div class="contact-block-label">Book a Discovery Call</div>
+        <p class="contact-block-sub">30 minutes. No commitment. Just clarity on what your data actually needs.</p>
+        <div class="cal-wrapper">
+          <div id="cal-inline"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form + email -->
+      <div class="contact-right">
+
+        <div class="contact-form-block">
+          <div class="contact-block-label">Or send a message</div>
+          <p class="contact-block-sub">Prefer to reach out first? Fill out the form and I'll get back to you within 24 hours.</p>
+
+          <form
+            action="https://formspree.io/f/xpwrjkqb"
+            method="POST"
+            class="contact-form"
+          >
+            <div class="form-row">
+              <div class="form-field">
+                <label for="first-name">First name <span class="req">*</span></label>
+                <input type="text" id="first-name" name="first_name" required placeholder="Jane" />
+              </div>
+              <div class="form-field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="jane@company.com" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="company">Company <span class="req">*</span></label>
+              <input type="text" id="company" name="company" required placeholder="Acme Inc." />
+            </div>
+
+            <div class="form-field">
+              <label for="service">Service you're interested in <span class="optional">(optional)</span></label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Select a service</option>
+                <option value="Data Audit">Data Audit</option>
+                <option value="Dashboard Sprint">Dashboard Sprint</option>
+                <option value="ETL Pipeline & Automation">ETL Pipeline &amp; Automation</option>
+                <option value="Fractional Data Analyst">Fractional Data Analyst</option>
+                <option value="AI Agent Development">AI Agent Development</option>
+                <option value="Other / Not sure yet">Other / Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message <span class="req">*</span></label>
+              <textarea id="message" name="message" required rows="5" placeholder="Tell me briefly what you're working on and what's not working..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Send message &nbsp;→</button>
+          </form>
+        </div>
+
+        <div class="contact-email-block">
+          <div class="contact-block-label">Also find me at</div>
+          <a href="mailto:hello@isabellarondon.com" class="contact-email">hello@isabellarondon.com</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script is:inline>
+  (function (C, A, L) {
+    let p = function (a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+      let cal = C.Cal; let ar = arguments;
+      if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+      if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["-queue", namespace]); } else p(cal, ar); return; }
+      p(cal, ar);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  Cal("init", { origin: "https://cal.com" });
+  Cal("inline", {
+    elementOrSelector: "#cal-inline",
+    calLink: "isabella-rondon-jrkvbh/30min",
+  });
+  Cal("ui", {
+    styles: { branding: { brandColor: "#E05C4B" } },
+    hideEventTypeDetails: false,
+    layout: "month_view",
+  });
+</script>
+
+<style>
+.contact-section {
+  padding: 80px 64px 100px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-block-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.contact-block-sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.cal-wrapper {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-surface);
+}
+
+#cal-inline {
+  width: 100%;
+  min-height: 600px;
+}
+
+/* Form */
+.contact-form-block {
+  margin-bottom: 56px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}
+
+.req { color: var(--accent); }
+.optional { font-weight: 400; color: var(--text-muted); }
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+  outline: none;
+  width: 100%;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235C5753' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+}
+
+.form-field select option {
+  background: var(--bg-surface-2);
+  color: var(--text-primary);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: rgba(224,92,75,0.5);
+}
+
+.form-field textarea { resize: vertical; min-height: 120px; }
+
+/* Email block */
+.contact-email-block {
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.contact-email {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-block;
+  margin-top: 8px;
+}
+.contact-email:hover { color: var(--accent-text); }
+</style>
