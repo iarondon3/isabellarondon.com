@@ -1,0 +1,52 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const {
+  title,
+  description = "Isabella Rondon is a freelance data analyst helping early-stage startups build data pipelines, dashboards, and AI automation.",
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <title>{title}</title>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Isabella Rondon<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Book a Call</a></li>
+    </ul>
+  </nav>
+
+  <slot />
+
+  <footer>
+    <a href="/" class="footer-logo">Isabella Rondon<span>.</span></a>
+    <ul class="footer-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="https://linkedin.com/in/isabellarondon" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Isabella Rondon</span>
+  </footer>
+
+</body>
+</html>
