@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
+
+const services = [
+  {
+    num: "01",
+    name: "Data Audit",
+    tagline: "The fastest way to know where your data stands.",
+    audience: "Founders who suspect their data is messy but don't know where to start.",
+    bullets: [
+      "Full review of your current data sources, pipelines, and reporting",
+      "Identification of revenue leaks, inefficiencies, and data you're collecting but not using",
+      "Prioritized roadmap of what to fix first and why",
+      "Written report with actionable recommendations",
+    ],
+    result: "After the audit, you'll know exactly what's broken, what's working, and what to do next.",
+  },
+  {
+    num: "02",
+    name: "Dashboard Sprint",
+    tagline: "From raw data to decisions — in two weeks.",
+    audience: "Teams making critical decisions from outdated spreadsheets or no dashboards at all.",
+    bullets: [
+      "Data cleaning pipeline to ensure your dashboards run on reliable, structured data",
+      "Data model design (star schema, clean structure)",
+      "KPI definition aligned with your business goals",
+      "Dashboard build in Power BI, Tableau, or Looker — automatically updated, no manual refreshes",
+      "Handoff with documentation so your team can maintain it",
+    ],
+    result: "After the sprint, your team stops guessing and starts deciding from real numbers.",
+  },
+  {
+    num: "03",
+    name: "ETL Pipeline & Automation",
+    tagline: "Stop doing manually what a pipeline can do for you.",
+    audience: "Founders losing hours every week to manual data exports, copy-pasting, or broken reports.",
+    bullets: [
+      "Custom pipeline design and architecture",
+      "Build and deployment on GCP (Cloud Functions, Scheduler, Secret Manager) or your existing cloud infrastructure",
+      "REST API integrations with your existing tools",
+      "Automated runs, error handling, and monitoring",
+      "Full documentation included",
+    ],
+    result: "After the build, your data flows automatically — no more manual work, no more errors.",
+  },
+  {
+    num: "04",
+    name: "Fractional Data Analyst",
+    tagline: "Senior data expertise, without the full-time hire.",
+    audience: "Seed and Series A startups that need ongoing data support but aren't ready to hire in-house.",
+    bullets: [
+      "Dedicated data support scaled to your stage — from weekly reporting to full data strategy",
+      "Ongoing dashboards, reporting, and analysis",
+      "Data strategy aligned with your growth stage",
+      "Direct access — no account managers, no middlemen",
+    ],
+    result: "The ongoing data layer your startup needs to scale without building a full team.",
+  },
+  {
+    num: "05",
+    name: "AI Agent Development",
+    tagline: "Automate your sales, support, or operations with a custom AI agent.",
+    audience: "Founders spending too much on headcount for repetitive customer-facing or internal workflows.",
+    bullets: [
+      "Custom AI agent design based on your business rules and workflows",
+      "Build and deployment on n8n with OpenAI or Anthropic models",
+      "Integrations with your existing tools (CRM, calendar, messaging, payments)",
+      "Silent lead qualification, automated responses, and smart handoff to your team",
+      "Conversation data capture and storage — every interaction becomes a demand signal",
+    ],
+    result: "After the build, your business runs workflows 24/7 — without adding headcount. And every conversation makes your product and strategy smarter.",
+  },
+];
+
+const faqs = [
+  {
+    q: "How do I know if I actually need a data analyst right now?",
+    a: `<p>You need one when your team is spending more time pulling data than acting on it — or when key decisions are getting delayed because nobody can produce reliable numbers fast enough.</p>
+        <p>For early-stage startups, the trigger is usually one of three things: investors asking for metrics you can't easily answer, manual exports eating hours every week, or dashboards that nobody fully trusts.</p>
+        <p>In 2026, many founders assume AI tools have solved this. They haven't — not at the infrastructure level. AI copilots can summarize data you already have clean and connected. They can't fix fragmented sources, broken pipelines, or metrics that don't mean the same thing across departments.</p>`,
+  },
+  {
+    q: "What's the difference between a data analyst, a data scientist, and a data engineer?",
+    a: `<p>For most early-stage startups, the answer is a data analyst. Here's the practical breakdown:</p>
+        <ul>
+          <li><strong>Data engineers</strong> build the pipes — infrastructure, ingestion, storage at scale. You need a dedicated one when your data volume and complexity justify full-time infrastructure work.</li>
+          <li><strong>Data scientists</strong> build predictive models and run statistical experiments. You need one when you have enough clean, structured data to train on.</li>
+          <li><strong>Data analysts</strong> connect your data sources, build reliable reporting, and translate numbers into business decisions. That's what most startups actually need first.</li>
+        </ul>
+        <p>Hiring a data scientist before you have clean data is one of the most common — and expensive — mistakes early-stage founders make.</p>`,
+  },
+  {
+    q: "Is a fractional data analyst worth it, or should I just hire full-time?",
+    a: `<p>At Seed and Series A, most startups don't have enough consistent analytical work to justify a full-time hire — and the scope changes rapidly as the product evolves. A fractional analyst gives you senior expertise at a fraction of the cost, with no long-term commitment.</p>
+        <p>In 2026, there's a third option founders are weighing: AI analytics tools that promise to replace the analyst entirely. For mechanical work — basic dashboards, scheduled reports — some of those tools deliver. But they assume your data is already clean, connected, and structured. When it isn't, the AI gives you confident-sounding answers built on unreliable inputs.</p>
+        <p>The time to hire full-time is when you have daily analytical demands that a fractional engagement can't absorb.</p>`,
+  },
+  {
+    q: "My team copies data from our tools into spreadsheets every week. When should I automate that?",
+    a: `<p>The moment the process takes more than 2–3 hours per week, or when a manual error has already affected a decision — automate it. At that point, the cost of building an ETL pipeline once is almost always recovered in under 90 days of time saved.</p>
+        <p>The calculation is straightforward: if a $60/hr employee spends 3 hours a week on manual exports, that's roughly $9,000/year in labor on a task an ETL pipeline handles in seconds.</p>
+        <p>The harder question isn't whether to automate — it's whether to build it right. An ETL pipeline designed without fault isolation, error handling, and documentation becomes a new source of fragility instead of reliability.</p>`,
+  },
+  {
+    q: "What does a data audit actually include, and what do I get at the end?",
+    a: `<p>A data audit reviews every data source your business uses — CRM, payment processor, product analytics, financial tools, spreadsheets — and maps what's reliable, what's broken, what's missing, and what you're collecting but never using.</p>
+        <p>At the end, you get a written report with a prioritized roadmap: what to fix first, what to build next, and why. Most founders use it to make an informed decision about what to invest in before committing to a larger build.</p>`,
+  },
+  {
+    q: "Can't I just use AI tools instead of hiring a data analyst?",
+    a: `<p>For some tasks, yes — and you probably already are. AI tools in 2026 are genuinely good at summarizing data you already have, generating SQL from plain-language questions, and producing basic dashboards on top of clean data sources.</p>
+        <p>What they can't do: fix the infrastructure problems underneath. If your data is coming from five disconnected sources, half of it refreshing manually and half automatically, with no agreed definition of what "active customer" means across your team — an AI tool will give you a fast, confident answer built on unreliable inputs.</p>
+        <p>The analogy: AI tools are an excellent calculator. But a calculator running on wrong numbers still gives you the wrong answer.</p>`,
+  },
+];
+---
+
+<Layout
+  title="Fractional Data Analyst Services for Startups | Isabella Rondon"
+  description="Data analytics services for early-stage startups — data audits, ETL pipeline consulting, Power BI dashboards, and fractional data analyst retainers. Book a free discovery call."
+>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="section-label">Services</div>
+      <h1>Data Services for<br><span class="accent-light">Early-Stage Startups</span></h1>
+      <p>Productized fractional data analyst services built for Seed and Series A startups. Clear scope, defined deliverables — built for the stage you're at today. Book a discovery call and we'll figure out together what fits.</p>
+    </div>
+  </header>
+
+  <!-- SERVICES LIST -->
+  <section class="svc-section">
+    <div class="svc-list">
+
+      {services.map((s) => (
+        <div class="svc-row">
+          <div class="svc-num">{s.num}</div>
+          <div class="svc-left">
+            <div class="svc-name">{s.name}</div>
+            <div class="svc-tagline">{s.tagline}</div>
+            <div class="svc-for">For</div>
+            <div class="svc-audience">{s.audience}</div>
+          </div>
+          <div class="svc-right">
+            <ul class="svc-bullets">
+              {s.bullets.map((b) => <li>{b}</li>)}
+            </ul>
+            <div class="svc-result">{s.result}</div>
+          </div>
+          <div class="svc-cta-col">
+            <a href={CAL_URL} class="svc-cta-link" target="_blank" rel="noopener">Book a call →</a>
+          </div>
+        </div>
+      ))}
+
+      <!-- Custom closing card -->
+      <div class="svc-row-custom">
+        <div class="svc-custom-left">
+          <div class="svc-custom-icon">↗</div>
+          <div class="svc-custom-text">
+            <strong>Not seeing exactly what you need?</strong>
+            <span>Every data problem is different. Let's talk about yours.</span>
+          </div>
+        </div>
+        <a href={CAL_URL} class="svc-cta-link" target="_blank" rel="noopener">Book a discovery call →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="faq-inner">
+      <div class="faq-left">
+        <div class="section-label">FAQ</div>
+        <div class="faq-title">Common questions before hiring a data analyst</div>
+        <p class="faq-sub">Honest answers — including the ones most analysts won't give you.</p>
+      </div>
+      <div class="faq-list">
+        {faqs.map((item) => (
+          <details>
+            <summary>
+              {item.q}
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer" set:html={item.a} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <div class="cta-final">
+    <div class="cta-final-left">
+      <div class="cta-final-label">Ready to build?</div>
+      <h2 class="cta-final-headline">Your startup needs a data foundation.<br>Let's build it right.</h2>
+      <p class="cta-final-sub">Book a 30-minute discovery call. We'll figure out exactly what you need — and whether I'm the right person to build it.</p>
+    </div>
+    <div class="cta-final-right">
+      <a href={CAL_URL} class="btn-primary" target="_blank" rel="noopener">Book a Discovery Call &nbsp;→</a>
+      <span class="cta-note">No commitment. 30 minutes.</span>
+    </div>
+  </div>
+
+</Layout>
