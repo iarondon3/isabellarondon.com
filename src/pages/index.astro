@@ -1,230 +1,229 @@
 ---
-import Layout from '../layouts/Layout.ast   ro';
+import Layout from '../layouts/Layout.astro';
 
 const stackItems = [
-  { slug: 'pytho n ' ,         label: 'Python' },
-  { slug: 'p os tg resql',     label: 'PostgreSQL' },
-  {  slu g:  'mysql',          label: 'MySQL' },
-   { s lug:  'googlecloud',    label: 'GCP' },
-   { s lug:  'googlebigquery', label: 'BigQuer y' },
-   { sl ug: 'googlesheets',   label: 'G oogle S heets'  },
-  { slug: 'powerbi',         label:  'Power  BI' },
-  { slug: 'tableau',         l abel: 'Ta bleau' },
-  { slug: 'look er',          label:  'Looker' },
-  { slug: ' n8n',             label : 'n8n' },
-  { slug:  'openai',          label:  'OpenAI' },
-  { sl ug: 'anthropi c',      labe l: 'Anthropic' }, 
+  { icon: 'https://cdn.simpleicons.org/python',         label: 'Python' },
+  { icon: 'https://cdn.simpleicons.org/postgresql',     label: 'PostgreSQL' },
+  { icon: 'https://cdn.simpleicons.org/mysql',          label: 'MySQL' },
+  { icon: 'https://cdn.simpleicons.org/googlecloud',    label: 'GCP' },
+  { icon: 'https://cdn.simpleicons.org/googlebigquery', label: 'BigQuery' },
+  { icon: 'https://cdn.simpleicons.org/googlesheets',   label: 'Google Sheets' },
+  { icon: 'https://api.iconify.design/simple-icons:powerbi.svg', label: 'Power BI' },
+  { icon: 'https://api.iconify.design/simple-icons:tableau.svg', label: 'Tableau' },
+  { icon: 'https://cdn.simpleicons.org/looker',         label: 'Looker' },
+  { icon: 'https://cdn.simpleicons.org/n8n',            label: 'n8n' },
+  { icon: 'https://api.iconify.design/simple-icons:openai.svg',  label: 'OpenAI' },
+  { icon: 'https://cdn.simpleicons.org/anthropic',      label: 'Anthropic' },
 ];
 ---
 
-<Layo ut
-  title="Fr eelance Data An alyst for Start ups | Isabella  Rondon"
-  des cription="Isabel la Rondon is a f reelance da ta analyst helpin g early-stage sta rtups bui ld data pipelines,  dashboards, and A I autom ation. Based in the  US."
+<Layout
+  title="Freelance Data Analyst for Startups | Isabella Rondon"
+  description="Isabella Rondon is a freelance data analyst helping early-stage startups build data pipelines, dashboards, and AI automation. Based in the US."
 >
 
-  <!-- HER O --> 
-  <section class="h ero">
-    <div class ="h ero-content">
-      < div class="hero-badge " >For Seed &amp; Series  A Startups</div>
-        <div class="hero-eye brow">
-        Your s ta rtup is drowning in d ata and starving for  ins ights.
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">For Seed &amp; Series A Startups</div>
+      <div class="hero-eyebrow">
+        Your startup is drowning in data and starving for insights.
       </div>
-       <h1 class="he ro-hea dline">
-        Tur n your data into d ecisions <br>
-        <span  class="accent-li ght">that  scale.</span>
-       </h1>
-      < p class="her o-subheadline">
-         I'm a f reelance data  analyst for ear ly-stage start ups. I build the  data
-         foundations f ounders actually n eed — autom ated pipelin es, financial
-         dashboards , and AI-po wered automation. Back ed by 5 yea rs driving  data
-        strategy a t a B2B fi nancial s ervices company.
-      </p >
-      < div clas s="hero-ctas">
-        <a hr ef="http s://cal .com/isabella-rondon-jrkvbh/30 min" cl ass="b tn-primary" target="_blank" rel= "noope ner"> 
-          Book a Discovery Call & nbsp; →
-         </a>
-        <a href="/case- stud ies " class="btn-secondary">See My Work &n bsp ;� ��</a>
+      <h1 class="hero-headline">
+        Turn your data into<br>
+        decisions <span class="accent-light">that scale.</span>
+      </h1>
+      <p class="hero-subheadline">
+        I'm a freelance data analyst for early-stage startups. I build the data
+        foundations founders actually need — automated pipelines, financial
+        dashboards, and AI-powered automation. Backed by 5 years driving data
+        strategy at a B2B financial services company.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="btn-primary" target="_blank" rel="noopener">
+          Book a Discovery Call &nbsp;→
+        </a>
+        <a href="/case-studies" class="btn-secondary">See My Work &nbsp;→</a>
       </div>
     </div>
-  </secti on > 
-
-  <!-- STACK STRIP -->
-  <div class="sta c  k-strip">
-    <div class="stack-track">
-         {[...stackItems, ...stackItems].map(({ slu g  , label }) => (
-        <div class="stack- it e m">
-          <img src={`https://cdn.sim ple ic ons.org/${slug}/ffffff`} alt="" width= "36"  he ight="36" />
-          <span>{label} </spa n>
-         </div>
-      ))}
-    </div> 
-  </d iv>
-
-   <!-- SERVICES -->
-  <section c lass="s ervice s" id="services">
-    <div cla ss="sect ion-lab el">Services</div>
-    <h2 c lass="sec tion-tit le">Data Services for Earl y-Stage St artups</h 2>
-    <p class="section -intro">
-       Produc tized services with fi xed scope an d defined d eliverables —
-       clear outpu t, clear tim eline.
-    </p>
-
-     <div class= "services-gri d">
-
-      <div  class="service- card">
-         <div class="s ervice-number">0 1</div>
-         <div class= "service-name">Da ta Audit</div>
-         <di v class="service-t agline">The faste st way t o know where your d ata stands.</div>
-          <ul class="service -bullets">
-           <l i>Full review of your  data sources, pipel in es, and reporting</li> 
-          <li>Identi  fication of revenue lea ks and unused data</l i >
-          <li>Priori tized roadmap of wha t t o fix first and why</ li>
-        </ul>
-          <div class="servic e-footer">
-           <a h ref="https://cal.co m/isabella-rondon -jrkvbh/3 0min" class="servi ce-link" target= "_blank" re l="noopener">Book  a call →</a> 
-        </di v>
-      </div>
- 
-      <div cl ass="service-ca rd">
-        <d iv class="ser vice-number">02</ div>
-        < div class="s ervice-name">Dashbo ard Sprint</d iv>
-         <div class="service- tagline">Fro m raw data  to decisions — in tw o weeks.</d iv>
-         <ul class="service-bul lets">
-           < li>Data cleaning pipeline f or reliab le, str uctured data</li>
-          < li>KPI d efinit ion aligned with your business  goals</ li>
-           <li>Dashboard in Power B I, Tab leau , or Looker — auto-updated</li>
-          < /ul>
-        <div class="service-foot er"> 
-           <a href="https://cal.com/isabe lla - rondon-jrkvbh/30min" class="service-link"  t  arget="_blank" rel="noopener">Book a call �   ��</a>
-        </div>
-      </div>
-
-        <di v class="service-card">
-        <div  cl ass="s ervice-number">03</div>
-        <di v c lass="s ervice-name">ETL Pipeline &amp; A utom ation</d iv>
-        <div class="service -tagl ine">Stop  doing manually what a pipeli ne can  do for yo u.</div>
-        <ul class= "servic e-bullets"> 
-          <li>Custom pip eline de sign and arc hitecture on GCP</li>
-            <li>REST API  integrations with you r existing  tools</li>
-           <li>Automat ed runs, er ror handling, a nd full documenta tion</li>
-         </ul>
-         <div class= "service-foot er">
-          <a  href="https: //cal.com/isab ella-rondon-jrkvbh /30min" cla ss="service-lin k" target="_blank"  rel="noop ener">Book a cal l →</a>
-        </ div>
-       </div>
-
-       <div class="service- card" >
-        <div cla ss="service-number">04 </d iv>
-        <div cl ass="service-name">Frac t ional Data Analyst</ div>
-        <div class=  "service-tagline">Se nior data expertise, wi th out the full-time h ire.</div>
-        <ul  cla ss="service-bullet s">
-          <li>Ong oing d ashboards, report ing, and analysis</l i>
-           <li>Data st rategy aligned with  your grow th stage</li>
-           <li>Direc t access —  no account ma nagers, no middle men</li>
-         </ul>
-         <div class=" service-footer"> 
-          < a href="https:/ /cal.com/isabella- rondon-jrkv bh/30min" clas s="service-link" tar get="_blan k" rel="noope ner">Book a call →</ a>
-         </div>
-       </div>
-
-      <div cl ass="ser vice-card"> 
-        <div class="servi ce-numb er">05</di v>
-        <div class="servi ce-nam e">AI Age nt Development</div>
-        < div c lass="se rvice-tagline">Automate sales, s uppo rt, or  operations with a custom AI agent. </d iv>
-         <ul class="service-bullets">
-             <li>Custom agent built on your busin e ss r ules, not a template</li>
-          <li>  Int egrations with your existing CRM, calendar  ,  and tools</li>
-          <li>Silent lead q u  alification and conversation data capture</  li >
-        </ul>
-        <div class="servic  e-f ooter">
-          <a href="https://cal.c o m/is abella-rondon-jrkvbh/30min" class="ser vi ce-li nk" target="_blank" rel="noopener">B ook  a cal l →</a>
-        </div>
-      </d iv>
- 
-       <!-- Custom card — full width  -->
-       <di v class="service-card service- card-c ustom">
-         <div class="service-c ustom-l eft">
-           <div class="service- name">No t seeing ex actly what you need?</di v>
-           <div cla ss="service-tagline">E very data  problem is di fferent. Let's talk  about yours .</div>
-         </div>
-        < div class="s ervice-custom-r ight">
-           <a href="htt ps://cal.com/isa bella-rondon-j rkvbh/30min" c lass="btn-primary " target="_b lank" rel="noop ener">
-             Book a Di scovery Call &nb sp;→
-          </ a>
-           <span style= "font-size:12px;colo r:var( --text-muted)">No  commitment. 30 minute s.</ span>
-        </div >
-      </div>
-
-    </ di v>
   </section>
 
-  < !-- CASE STUDIES -->
-    <section class="case- studies" id="case-studi e s">
-    <div class=" case-studies-header">
-        <div class="case -studies-header-left" >
-         <div class="s ection-label">Case S tudies< /div>
-        <h2  class="section-tit le">Real  Projects. Real R esults.</h2>
-       </div>
-       <a href="/ca se-studies" class ="view-all">V iew all case s tudies &nbsp;→ </a>
-    </div> 
+  <!-- STACK STRIP -->
+  <div class="stack-strip">
+    <div class="stack-track">
+      {[...stackItems, ...stackItems].map(({ icon, label }) => (
+        <div class="stack-item">
+          <img src={icon} alt="" width="36" height="36" />
+          <span>{label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
 
-    <div cl ass="cs-grid">
-       <a href="/c ase-studies/ financial-repo rting-automation" c lass="cs-ca rd">
-         <div class="cs-servic e-tag">ETL  Pipeline &a mp; Automation</div>
-         <di v class="cs -headline">
-          2 d ays of m anual Quic kBooks work every week. Now  a pipe line runs  it daily — for 8 companies  at on ce.
-         </div>
-        <div class=" cs-st at">
-           <div class="cs-stat-value ">16  hrs<s pan style="font-size:16px;font-weig ht: 500;c olor:var(--text-muted)">/week</span>< /d iv>
-           <div class="cs-stat-label">re c ove red for the finance team</div>
-        </  di v>
-        <div class="cs-link">Read case s   tudy →</div>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-label">Services</div>
+    <h2 class="section-title">Data Services for Early-Stage Startups</h2>
+    <p class="section-intro">
+      Productized services with fixed scope and defined deliverables —
+      clear output, clear timeline.
+    </p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-number">01</div>
+        <div class="service-name">Data Audit</div>
+        <div class="service-tagline">The fastest way to know where your data stands.</div>
+        <ul class="service-bullets">
+          <li>Full review of your data sources, pipelines, and reporting</li>
+          <li>Identification of revenue leaks and unused data</li>
+          <li>Prioritized roadmap of what to fix first and why</li>
+        </ul>
+        <div class="service-footer">
+          <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="service-link" target="_blank" rel="noopener">Book a call →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <div class="service-name">Dashboard Sprint</div>
+        <div class="service-tagline">From raw data to decisions — in two weeks.</div>
+        <ul class="service-bullets">
+          <li>Data cleaning pipeline for reliable, structured data</li>
+          <li>KPI definition aligned with your business goals</li>
+          <li>Dashboard in Power BI, Tableau, or Looker — auto-updated</li>
+        </ul>
+        <div class="service-footer">
+          <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="service-link" target="_blank" rel="noopener">Book a call →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <div class="service-name">ETL Pipeline &amp; Automation</div>
+        <div class="service-tagline">Stop doing manually what a pipeline can do for you.</div>
+        <ul class="service-bullets">
+          <li>Custom pipeline design and architecture on GCP</li>
+          <li>REST API integrations with your existing tools</li>
+          <li>Automated runs, error handling, and full documentation</li>
+        </ul>
+        <div class="service-footer">
+          <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="service-link" target="_blank" rel="noopener">Book a call →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-number">04</div>
+        <div class="service-name">Fractional Data Analyst</div>
+        <div class="service-tagline">Senior data expertise, without the full-time hire.</div>
+        <ul class="service-bullets">
+          <li>Ongoing dashboards, reporting, and analysis</li>
+          <li>Data strategy aligned with your growth stage</li>
+          <li>Direct access — no account managers, no middlemen</li>
+        </ul>
+        <div class="service-footer">
+          <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="service-link" target="_blank" rel="noopener">Book a call →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-number">05</div>
+        <div class="service-name">AI Agent Development</div>
+        <div class="service-tagline">Automate sales, support, or operations with a custom AI agent.</div>
+        <ul class="service-bullets">
+          <li>Custom agent built on your business rules, not a template</li>
+          <li>Integrations with your existing CRM, calendar, and tools</li>
+          <li>Silent lead qualification and conversation data capture</li>
+        </ul>
+        <div class="service-footer">
+          <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="service-link" target="_blank" rel="noopener">Book a call →</a>
+        </div>
+      </div>
+
+      <div class="service-card service-card-custom">
+        <div class="service-custom-left">
+          <div class="service-name">Not seeing exactly what you need?</div>
+          <div class="service-tagline">Every data problem is different. Let's talk about yours.</div>
+        </div>
+        <div class="service-custom-right">
+          <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="btn-primary" target="_blank" rel="noopener">
+            Book a Discovery Call &nbsp;→
+          </a>
+          <span style="font-size:12px;color:var(--text-muted)">No commitment. 30 minutes.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="case-studies" id="case-studies">
+    <div class="case-studies-header">
+      <div class="case-studies-header-left">
+        <div class="section-label">Case Studies</div>
+        <h2 class="section-title">Real Projects. Real Results.</h2>
+      </div>
+      <a href="/case-studies" class="view-all">View all case studies &nbsp;→</a>
+    </div>
+
+    <div class="cs-grid">
+      <a href="/case-studies/financial-reporting-automation" class="cs-card">
+        <div class="cs-service-tag">ETL Pipeline &amp; Automation</div>
+        <div class="cs-headline">
+          2 days of manual QuickBooks work every week. Now a pipeline runs it daily — for 8 companies at once.
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">16 hrs<span style="font-size:16px;font-weight:500;color:var(--text-muted)">/week</span></div>
+          <div class="cs-stat-label">recovered for the finance team</div>
+        </div>
+        <div class="cs-link">Read case study →</div>
       </a>
 
-      <a href="/c  a se-studies/financial-data-strategy" class="  cs -card">
-        <div class="cs-service-ta g ">D ata Strategy · ETL Pipeline</div>
-          <d iv class="cs-headline">
-          I d idn 't ju st fix the data problem. I turned i t in to $1. 5M in net profit.
+      <a href="/case-studies/financial-data-strategy" class="cs-card">
+        <div class="cs-service-tag">Data Strategy · ETL Pipeline</div>
+        <div class="cs-headline">
+          I didn't just fix the data problem. I turned it into $1.5M in net profit.
         </div>
-          <div  class="cs-stat">
-          <di v clas s="cs-st at-value">$1.5M+</div>
-           <di v class=" cs-stat-label">net profit g enerated </div>
-         </div>
-        <div  class="cs -link">Read  case study →</div>
-       </a>
- 
-      <a hr ef="/case-studies/ai- sales-agent -car-dealersh ip" class="cs-card" >
-        <d iv class="cs-s ervice-tag">AI Ag ent Developme nt</div>
-         <div class="c s-headline">
-           Most pe ople talk abo ut what an AI a gent could do. He re's one yo u can actually t alk to.
-        </ div>
-         <div class="c s-stat">
-           <div cl ass="cs-stat-value ">24/7</div>
-           <d iv class="cs-stat-l abel">availability ·  0  hallucinations in te sting</div>
-        </ d iv>
-        <div clas s="cs-link">Read case s  tudy →</div>
-       </a>
+        <div class="cs-stat">
+          <div class="cs-stat-value">$1.5M+</div>
+          <div class="cs-stat-label">net profit generated</div>
+        </div>
+        <div class="cs-link">Read case study →</div>
+      </a>
+
+      <a href="/case-studies/ai-sales-agent-car-dealership" class="cs-card">
+        <div class="cs-service-tag">AI Agent Development</div>
+        <div class="cs-headline">
+          Most people talk about what an AI agent could do. Here's one you can actually talk to.
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">24/7</div>
+          <div class="cs-stat-label">availability · 0 hallucinations in testing</div>
+        </div>
+        <div class="cs-link">Read case study →</div>
+      </a>
     </div>
-  </se ct ion>
+  </section>
 
-  <!-- CTA FIN AL -->
-  <div class=" cta- final">
-    <div cl ass="cta-final-left" >
-       <div class="cta- final-label">Ready  to build ?</div>
-      <h2  class="cta-final- headline"> 
-        Your st artup needs a dat a foundation .<br>Let's buil d it right.
-       </h2>
-       <p class="cta- final-sub">
-         Book a 30-m inute discove ry call. We'll  figure out exactl y what you n eed —
-         and whether I'm t he right pe rson to buil d it.
+  <!-- CTA FINAL -->
+  <div class="cta-final">
+    <div class="cta-final-left">
+      <div class="cta-final-label">Ready to build?</div>
+      <h2 class="cta-final-headline">
+        Your startup needs a data foundation.<br>Let's build it right.
+      </h2>
+      <p class="cta-final-sub">
+        Book a 30-minute discovery call. We'll figure out exactly what you need —
+        and whether I'm the right person to build it.
       </p>
-    < /div>
-     <div class= "cta-final-right">
-       <a href= "https://c al.com/isabella-rondon-jrk vbh/30mi n" class= "btn-primary" target="_blank " rel=" noopener ">
-        Book a Discovery Ca ll &nb sp;→
-       </a>
-      <span class="ct a-not e">No  commitment. 30 minutes.</span>
-     </d iv>
-   </div>
+    </div>
+    <div class="cta-final-right">
+      <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="btn-primary" target="_blank" rel="noopener">
+        Book a Discovery Call &nbsp;→
+      </a>
+      <span class="cta-note">No commitment. 30 minutes.</span>
+    </div>
+  </div>
 
-</Layout>   
+</Layout>
