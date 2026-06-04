@@ -2,18 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 
 const stackItems = [
-  { slug: 'python',            label: 'Python' },
-  { slug: 'postgresql',        label: 'PostgreSQL' },
-  { slug: 'mysql',             label: 'MySQL' },
-  { slug: 'googlecloud',       label: 'GCP' },
-  { slug: 'googlebigquery',    label: 'BigQuery' },
-  { slug: 'googlesheets',      label: 'Google Sheets' },
-  { slug: 'microsoftpowerbi',  label: 'Power BI' },
-  { slug: 'tableau',           label: 'Tableau' },
-  { slug: 'looker',            label: 'Looker' },
-  { slug: 'n8n',               label: 'n8n' },
-  { slug: 'openai',            label: 'OpenAI' },
-  { slug: 'anthropic',         label: 'Anthropic' },
+  { slug: 'python',         label: 'Python' },
+  { slug: 'postgresql',     label: 'PostgreSQL' },
+  { slug: 'mysql',          label: 'MySQL' },
+  { slug: 'googlecloud',    label: 'GCP' },
+  { slug: 'googlebigquery', label: 'BigQuery' },
+  { slug: 'googlesheets',   label: 'Google Sheets' },
+  { slug: 'powerbi',        label: 'Power BI' },
+  { slug: 'tableau',        label: 'Tableau' },
+  { slug: 'looker',         label: 'Looker' },
+  { slug: 'n8n',            label: 'n8n' },
+  { slug: 'openai',         label: 'OpenAI' },
+  { slug: 'anthropic',      label: 'Anthropic' },
 ];
 ---
 
@@ -70,6 +70,7 @@ const stackItems = [
     </p>
 
     <div class="services-grid">
+
       <div class="service-card">
         <div class="service-number">01</div>
         <div class="service-name">Data Audit</div>
@@ -139,6 +140,21 @@ const stackItems = [
           <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="service-link" target="_blank" rel="noopener">Book a call →</a>
         </div>
       </div>
+
+      <!-- Custom card — full width -->
+      <div class="service-card service-card-custom">
+        <div class="service-custom-left">
+          <div class="service-name">Not seeing exactly what you need?</div>
+          <div class="service-tagline">Every data problem is different. Let's talk about yours.</div>
+        </div>
+        <div class="service-custom-right">
+          <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="btn-primary" target="_blank" rel="noopener">
+            Book a Discovery Call &nbsp;→
+          </a>
+          <span style="font-size:12px;color:var(--text-muted)">No commitment. 30 minutes.</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
