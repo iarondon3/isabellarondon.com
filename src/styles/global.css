@@ -674,8 +674,8 @@ footer {
   margin-bottom: 6px;
 }
 .svc-tagline {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   color: var(--accent-text);
   margin-bottom: 20px;
   line-height: 1.5;
