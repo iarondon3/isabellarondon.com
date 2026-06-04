@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
+
+const stackItems = [
+  { icon: 'https://cdn.simpleicons.org/python',         label: 'Python' },
+  { icon: 'https://cdn.simpleicons.org/postgresql',     label: 'PostgreSQL' },
+  { icon: 'https://cdn.simpleicons.org/mysql',          label: 'MySQL' },
+  { icon: 'https://cdn.simpleicons.org/googlecloud',    label: 'GCP' },
+  { icon: 'https://cdn.simpleicons.org/googlebigquery', label: 'BigQuery' },
+  { icon: 'https://cdn.simpleicons.org/googlesheets',   label: 'Google Sheets' },
+  { icon: 'https://api.iconify.design/simple-icons:powerbi.svg',  label: 'Power BI' },
+  { icon: 'https://api.iconify.design/simple-icons:tableau.svg',  label: 'Tableau' },
+  { icon: 'https://cdn.simpleicons.org/looker',         label: 'Looker' },
+  { icon: 'https://cdn.simpleicons.org/n8n',            label: 'n8n' },
+  { icon: 'https://api.iconify.design/simple-icons:openai.svg',   label: 'OpenAI' },
+  { icon: 'https://cdn.simpleicons.org/anthropic',      label: 'Anthropic' },
+];
+---
+
+<Layout
+  title="Isabella Rondón — Freelance Data Analyst for Startups"
+  description="Business economist with 5+ years in B2B financial services. I help early-stage startups build the data infrastructure they need to scale — pipelines, dashboards, and AI automation."
+>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+    <div class="about-hero-left">
+      <div class="section-label">About</div>
+      <h1 class="about-headline">
+        Data Analyst<br>and <span>Business Economist</span>
+      </h1>
+      <p class="about-opening">
+        Most data analysts think in queries. <em>I think in business outcomes first</em> — then figure out what query gets us there.<br /><br />
+        That's the economist in me. And it's why the work tends to stick.
+      </p>
+    </div>
+
+    <div class="about-photo">
+      <div class="about-photo-wrap">
+        <img src="/photo.jpg" alt="Isabella Rondon" />
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section class="about-body">
+    <div class="about-section">
+      <div class="about-section-title">Background</div>
+      <div class="about-text">
+        <p>I have a degree in <strong style="display:inline;font-size:inherit;margin:0;">Business Economics</strong> with a minor in <strong style="display:inline;font-size:inherit;margin:0;">Data Analysis</strong>. I spent 5 years as the data and operations lead at a B2B financial services company with 400+ corporate clients.</p>
+        <p>During that time I built the systems that eliminated multi-day reconciliation meetings, automated critical reporting workflows, and contributed to <strong style="display:inline;font-size:inherit;margin:0;">$1.5M+ in net profit</strong> through upsell and cross-sell.</p>
+        <p>Before that, I worked in sales at a high-growth tech company. That background shaped how I think about data: not as an end in itself, but as the thing that drives commercial decisions.</p>
+        <p>Now I work independently with early-stage startups in the US — building the data layer that lets them scale without a full in-house team.</p>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <div class="about-section-title">How I Work</div>
+      <div class="about-text">
+        <p><strong style="display:inline;font-size:inherit;margin:0;">100% remote.</strong> Available ET hours. I work from wherever I am — no office politics, no overhead, full focus on your project.</p>
+        <p>I prioritize documentation and clean handoffs — so your team can understand, maintain, and build on what I deliver.</p>
+        <p>Every engagement is clearly scoped with defined deliverables and timelines. You know what you're getting and when it's done — before we start.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK MARQUEE -->
+  <section class="about-stack">
+    <div class="about-stack-header">
+      <div class="section-label">Stack</div>
+    </div>
+    <div class="stack-marquee">
+      <div class="stack-track">
+        {[...stackItems, ...stackItems].map(({ icon, label }) => (
+          <div class="stack-item">
+            <img src={icon} alt="" width="36" height="36" />
+            <span>{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB -->
+  <section class="about-github">
+    <div class="section-label">Selected work on GitHub</div>
+    <div class="github-cards">
+      <a href="https://github.com/iarondon3/End-to-End-Retail-Data-Ecosystem" class="github-card" target="_blank" rel="noopener">
+        <div class="github-card-name">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          End-to-End Retail Data Ecosystem
+        </div>
+        <div class="github-card-desc">Full data pipeline from ingestion to visualization for retail analytics.</div>
+      </a>
+      <a href="https://github.com/iarondon3/Multilayer-Perceptron" class="github-card" target="_blank" rel="noopener">
+        <div class="github-card-name">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Multilayer Perceptron
+        </div>
+        <div class="github-card-desc">Neural network implementation from scratch in Python.</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <div class="cta-final">
+    <div class="cta-final-left">
+      <div class="cta-final-label">Work together</div>
+      <h2 class="cta-final-headline">Ready to build the data foundation your startup actually needs?</h2>
+      <p class="cta-final-sub">Book a 30-minute discovery call. We'll figure out exactly what you need — and whether I'm the right person to build it.</p>
+    </div>
+    <div class="cta-final-right">
+      <a href={CAL_URL} class="btn-primary" target="_blank" rel="noopener">Book a Discovery Call &nbsp;→</a>
+      <span class="cta-note">No commitment. 30 minutes.</span>
+    </div>
+  </div>
+
+</Layout>

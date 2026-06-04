@@ -883,3 +883,159 @@ footer {
 }
 .faq-answer ul li { position: relative; }
 .faq-answer ul li::before { content: '—'; position: absolute; left: -16px; color: var(--text-muted); }
+
+/* ─── ABOUT PAGE ──────────────────────────────────── */
+.about-hero {
+  padding: 140px 64px 0;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-headline {
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 32px;
+}
+.about-headline span { color: var(--accent-light); }
+
+.about-opening {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+.about-opening em {
+  font-style: normal;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.about-photo {
+  position: sticky;
+  top: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.about-photo-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1C0A03;
+  min-height: 420px;
+}
+.about-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -30px;
+  background: url('/photo.jpg') center/cover no-repeat;
+  filter: blur(32px) brightness(0.14) sepia(1) saturate(2);
+  z-index: 0;
+}
+.about-photo-wrap img {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  filter: grayscale(1);
+  transition: filter 0.6s ease;
+  -webkit-mask-image: radial-gradient(ellipse 62% 72% at 50% 44%, black 38%, rgba(0,0,0,0.88) 52%, rgba(0,0,0,0.45) 65%, transparent 78%);
+  mask-image: radial-gradient(ellipse 62% 72% at 50% 44%, black 38%, rgba(0,0,0,0.88) 52%, rgba(0,0,0,0.45) 65%, transparent 78%);
+}
+.about-photo:hover .about-photo-wrap img { filter: grayscale(0); }
+.about-photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 68% at 50% 44%, transparent 35%, rgba(5,2,0,0.5) 62%, rgba(4,1,0,0.88) 82%, #030100 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.about-body {
+  padding: 80px 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  border-top: 1px solid var(--border);
+}
+.about-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.about-text {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+.about-text p + p { margin-top: 20px; }
+
+.about-stack { border-top: 1px solid var(--border); padding-bottom: 80px; }
+.about-stack-header { padding: 48px 64px 28px; }
+
+.stack-marquee {
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+.stack-marquee::before,
+.stack-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.stack-marquee::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
+.stack-marquee::after  { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+
+.about-github {
+  padding: 64px 64px 80px;
+  border-top: 1px solid var(--border);
+}
+.github-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 4px;
+}
+.github-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px 24px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.github-card:hover { background: var(--bg-surface-2); border-color: var(--border-hover); }
+.github-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.github-card-name svg { flex-shrink: 0; opacity: 0.5; }
+.github-card-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
