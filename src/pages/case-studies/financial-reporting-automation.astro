@@ -1,0 +1,151 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
+---
+
+<Layout
+  title="QuickBooks Automation with Python and GCP — Financial Reporting Case Study"
+  description="I built a Python pipeline on GCP that pulls QuickBooks Online data for 8 companies automatically every day. The finance team recovered 2 full days a week. Zero manual work."
+>
+
+  <!-- CASE STUDY HEADER -->
+  <header class="cs-header">
+    <div class="cs-header-inner">
+      <a href="/case-studies" class="cs-back">← Case Studies</a>
+      <div class="cs-tag">ETL Pipeline &amp; Automation</div>
+      <h1 class="cs-headline">
+        2 days of manual QuickBooks work every week.<br>
+        Now a Python pipeline runs it daily — for 8 companies at once.
+      </h1>
+      <p class="cs-subheadline">The VP of Finance at a US-based education holding company was spending 2 full days a week manually exporting QuickBooks Online data across 8 entities and pasting it into a shared Google Sheet. I built a Python automation pipeline on GCP that eliminated that entirely. Now their financial data updates automatically every morning.</p>
+    </div>
+  </header>
+
+  <!-- STATS BAR -->
+  <div class="cs-stats-bar">
+    <div class="cs-stat-item">
+      <div class="cs-stat-value">16 hrs/week</div>
+      <div class="cs-stat-label">saved for the finance team</div>
+    </div>
+    <div class="cs-stat-divider"></div>
+    <div class="cs-stat-item">
+      <div class="cs-stat-value">100%</div>
+      <div class="cs-stat-label">data accuracy — no manual touchpoints</div>
+    </div>
+    <div class="cs-stat-divider"></div>
+    <div class="cs-stat-item">
+      <div class="cs-stat-value">8 entities</div>
+      <div class="cs-stat-label">automated simultaneously</div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="cs-content">
+
+    <section class="cs-section">
+      <h2 class="cs-section-title">The Problem</h2>
+      <div class="cs-body">
+        <p>Every Friday, the VP of Finance had a deadline: deliver updated financials for the entire group. To meet it, she spent 2 full days a week manually exporting data from QuickBooks Online — one company at a time, across 8 separate entities — and pasting it into a shared Google Sheet.</p>
+        <p>No automation. No pipeline. Just copy, paste, check, repeat.</p>
+        <p>The process wasn't just slow. It was fragile. One wrong cell, one missed export, one formatting inconsistency — and the numbers were off. At the scale of a multi-entity holding company, that kind of error isn't a minor inconvenience. It's a risk.</p>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="cs-section-title">The Solution: A Python + GCP Pipeline Connected to QuickBooks Online</h2>
+      <div class="cs-body">
+        <p>I designed and built a fully automated data pipeline from scratch, end to end.</p>
+        <p>The pipeline connects directly to the QuickBooks Online REST API, pulls financial data for all 8 entities, and writes clean, structured output to Google Sheets automatically. It runs on a daily schedule, so the data is always current — not just ready for Friday, but accurate every morning.</p>
+
+        <div class="cs-stack-row">
+          <span class="cs-stack-label">Stack</span>
+          <div class="cs-stack-tags">
+            <span>Python</span>
+            <span>GCP Cloud Functions</span>
+            <span>Cloud Scheduler</span>
+            <span>Secret Manager</span>
+            <span>QuickBooks Online REST API</span>
+            <span>Google Sheets API</span>
+          </div>
+        </div>
+
+        <div class="cs-decisions">
+          <div class="cs-decision-title">Key design decisions</div>
+          <div class="cs-decision-item">
+            <div class="cs-decision-name">Fault isolation by entity</div>
+            <div class="cs-decision-desc">If one company's data fails to sync, the other 7 continue unaffected. Errors surface cleanly without breaking the full pipeline.</div>
+          </div>
+          <div class="cs-decision-item">
+            <div class="cs-decision-name">Secret Manager for credentials</div>
+            <div class="cs-decision-desc">API keys and OAuth tokens stored securely in GCP Secret Manager — never hardcoded.</div>
+          </div>
+          <div class="cs-decision-item">
+            <div class="cs-decision-name">Idempotent runs</div>
+            <div class="cs-decision-desc">The pipeline can re-run safely without duplicating or corrupting data.</div>
+          </div>
+          <div class="cs-decision-item">
+            <div class="cs-decision-name">Full documentation</div>
+            <div class="cs-decision-desc">The client can understand, monitor, and maintain what was built.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="cs-section-title">The Results</h2>
+      <div class="cs-body">
+        <div class="cs-results-table">
+          <div class="cs-results-header">
+            <span>Metric</span>
+            <span>Before</span>
+            <span>After</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Time spent on data entry</span>
+            <span>~16 hrs/week (2 full days)</span>
+            <span class="after">0</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Data freshness</span>
+            <span>Updated manually, once a week</span>
+            <span class="after">Automated daily</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Accuracy</span>
+            <span>Prone to human error</span>
+            <span class="after">100% — no manual touchpoints</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Coverage</span>
+            <span>8 entities, one by one</span>
+            <span class="after">8 entities, simultaneously</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Risk of failure</span>
+            <span>Single point of failure</span>
+            <span class="after">Fault-isolated per entity</span>
+          </div>
+        </div>
+        <p class="cs-closing">The VP of Finance recovered 2 full days a week — time she'd been spending on data entry instead of actual financial analysis. With the pipeline running daily, the team stopped making decisions from week-old numbers and started getting ahead of them.</p>
+        <p class="cs-closing-bold">From 2 days of manual QuickBooks exports to zero. Data accurate. Data current. Every morning.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cs-cta-block">
+    <div class="cs-cta-inner">
+      <div class="cs-cta-left">
+        <h2 class="cs-cta-headline">Spending hours on data your tools should handle automatically?</h2>
+        <p class="cs-cta-sub">If your team is manually exporting, copying, or refreshing data that could run on a pipeline — that's time and accuracy you're leaving on the table.</p>
+      </div>
+      <div class="cs-cta-right">
+        <a href={CAL_URL} class="btn-primary" target="_blank" rel="noopener">Book a Discovery Call &nbsp;→</a>
+        <span class="cta-note">No commitment. 30 minutes.</span>
+      </div>
+    </div>
+  </div>
+
+</Layout>

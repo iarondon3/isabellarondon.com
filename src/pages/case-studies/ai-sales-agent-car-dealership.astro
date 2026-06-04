@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
+---
+
+<Layout
+  title="Custom AI Agent Development for Business — Case Study"
+  description="Custom AI agent development for a car dealership — 24/7 customer service, silent lead qualification, appointment scheduling, and demand capture. Built on n8n with OpenAI and Anthropic APIs."
+>
+
+  <!-- CASE STUDY HEADER -->
+  <header class="cs-header">
+    <div class="cs-header-inner">
+      <a href="/case-studies" class="cs-back">← Case Studies</a>
+      <div class="cs-tag">AI Agent Development</div>
+      <h1 class="cs-headline">
+        Most people talk about what an AI agent could do.<br>
+        Here's one you can actually talk to.
+      </h1>
+      <p class="cs-subheadline">Custom AI agent development built for real business rules — not a generic chatbot. I built a fully functional AI sales agent for a car dealership, complete with live integrations and production-ready architecture. No hallucinations. A working agent that handles what your team handles today, around the clock.</p>
+    </div>
+  </header>
+
+  <!-- STATS BAR -->
+  <div class="cs-stats-bar">
+    <div class="cs-stat-item">
+      <div class="cs-stat-value">24/7</div>
+      <div class="cs-stat-label">availability</div>
+    </div>
+    <div class="cs-stat-divider"></div>
+    <div class="cs-stat-item">
+      <div class="cs-stat-value">5</div>
+      <div class="cs-stat-label">automated workflows</div>
+    </div>
+    <div class="cs-stat-divider"></div>
+    <div class="cs-stat-item">
+      <div class="cs-stat-value">0</div>
+      <div class="cs-stat-label">hallucinations in testing</div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="cs-content">
+
+    <section class="cs-section">
+      <h2 class="cs-section-title">The Problem</h2>
+      <div class="cs-body">
+        <p>A car dealership's sales cycle doesn't stop at 6pm. Leads come in on weekends, after hours, and during peak seasons when the floor team is overwhelmed. Every unanswered message is a lost opportunity — and hiring more staff to cover every time window doesn't scale.</p>
+        <p>Beyond availability, there was a subtler problem: no visibility into what customers actually wanted when a specific car wasn't in stock. That demand was disappearing into thin air instead of informing inventory and sales strategy.</p>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="cs-section-title">The Solution</h2>
+      <div class="cs-body">
+        <p>I designed and built a production-ready AI agent from scratch — trained on the dealership's real business rules, inventory logic, and customer service policies.</p>
+
+        <div class="cs-stack-row">
+          <span class="cs-stack-label">Stack</span>
+          <div class="cs-stack-tags">
+            <span>n8n</span>
+            <span>OpenAI API</span>
+            <span>Anthropic API</span>
+            <span>Structured database integrations</span>
+          </div>
+        </div>
+
+        <div class="cs-decisions">
+          <div class="cs-decision-title">What this AI agent does for the business</div>
+          <div class="cs-decision-item">
+            <div class="cs-decision-name">Customer service</div>
+            <div class="cs-decision-desc">Answers questions about location, hours, delivery, and inventory in natural, accurate language.</div>
+          </div>
+          <div class="cs-decision-item">
+            <div class="cs-decision-name">Financing offers</div>
+            <div class="cs-decision-desc">If a customer's budget doesn't cover a vehicle, the agent proactively presents financing options and walks them through the process.</div>
+          </div>
+          <div class="cs-decision-item">
+            <div class="cs-decision-name">Appointment scheduling</div>
+            <div class="cs-decision-desc">Books showroom visits directly into a database — no human handoff required.</div>
+          </div>
+          <div class="cs-decision-item">
+            <div class="cs-decision-name">Silent demand capture</div>
+            <div class="cs-decision-desc">When a customer asks for a car that isn't available, the agent logs the request silently in a structured database. Every unavailable inquiry becomes a demand signal for inventory planning.</div>
+          </div>
+          <div class="cs-decision-item">
+            <div class="cs-decision-name">Smart handoff</div>
+            <div class="cs-decision-desc">When a conversation reaches a decision point that requires a human, the agent transfers cleanly with full context.</div>
+          </div>
+        </div>
+
+        <p>The agent was demonstrated to the dealership's team fully operational — handling real conversations, applying real business rules, producing zero hallucinations across all test scenarios.</p>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="cs-section-title">See It For Yourself</h2>
+      <div class="cs-body">
+        <p>This isn't a mockup or a slide deck. It's a working agent — built on real business rules, tested against real conversations, with zero hallucinations across all scenarios.</p>
+        <p>The fastest way to understand what I can build for your business is to talk to this one.</p>
+        <div class="cs-demo-block">
+          <span class="cs-demo-label">Live demo</span>
+          <span class="cs-demo-coming">Coming soon</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cs-cta-block">
+    <div class="cs-cta-inner">
+      <div class="cs-cta-left">
+        <h2 class="cs-cta-headline">Want an agent built for your business rules, not a generic chatbot?</h2>
+        <p class="cs-cta-sub">Every AI agent I build starts with your workflows, your edge cases, and your customer language — not a template. The result is an agent your team can trust to run without supervision.</p>
+      </div>
+      <div class="cs-cta-right">
+        <a href={CAL_URL} class="btn-primary" target="_blank" rel="noopener">Book a Discovery Call &nbsp;→</a>
+        <span class="cta-note">No commitment. 30 minutes.</span>
+      </div>
+    </div>
+  </div>
+
+</Layout>

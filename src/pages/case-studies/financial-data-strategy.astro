@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
+---
+
+<Layout
+  title="Financial Data Analyst for B2B Services — $1.5M Growth Case Study"
+  description="I rebuilt how a B2B financial services company managed reconciliation and client data — eliminating multi-day meetings, cutting errors 99%, and generating $1.5M+ in net profit."
+>
+
+  <!-- CASE STUDY HEADER -->
+  <header class="cs-header">
+    <div class="cs-header-inner">
+      <a href="/case-studies" class="cs-back">← Case Studies</a>
+      <div class="cs-tag">Data Strategy · ETL Pipeline &amp; Automation</div>
+      <h1 class="cs-headline">
+        I didn't just fix the data problem.<br>
+        I turned it into $1.5M in net profit.
+      </h1>
+      <p class="cs-subheadline">A B2B financial services company with 400+ corporate clients needed a financial data analyst, not just a tool. They were running critical operations on manual exports, siloed spreadsheets, and informal messaging channels. I rebuilt how they managed and used their data — and drove $1.5M+ in net profit in the process.</p>
+    </div>
+  </header>
+
+  <!-- STATS BAR -->
+  <div class="cs-stats-bar">
+    <div class="cs-stat-item">
+      <div class="cs-stat-value">$1.5M+</div>
+      <div class="cs-stat-label">net profit generated</div>
+    </div>
+    <div class="cs-stat-divider"></div>
+    <div class="cs-stat-item">
+      <div class="cs-stat-value">99%</div>
+      <div class="cs-stat-label">reduction in reconciliation errors</div>
+    </div>
+    <div class="cs-stat-divider"></div>
+    <div class="cs-stat-item">
+      <div class="cs-stat-value">100%</div>
+      <div class="cs-stat-label">client satisfaction score</div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="cs-content">
+
+    <section class="cs-section">
+      <h2 class="cs-section-title">The Problem</h2>
+      <div class="cs-body">
+        <p>Every transaction at this company involved multiple parties: an OTC provider, an operations team, and a finance department. The workflow holding it all together was informal by design — conversations happened over messaging apps, each department manually downloaded their piece of the data into their own spreadsheet, and nobody was working from the same numbers.</p>
+        <p>When operations and finance sat down to reconcile, they weren't comparing data. They were arguing about whose version was correct. Those meetings regularly stretched from hours into days.</p>
+        <p>Two problems. Both rooted in the same thing: no reliable data infrastructure.</p>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="cs-section-title">The Solution</h2>
+      <div class="cs-body">
+        <div class="cs-solution-block">
+          <div class="cs-solution-label">Layer 1 — Operational data routing</div>
+          <p>I built an automated workflow that replaced the informal messaging chain entirely. When a transaction request came in, the relevant information was routed simultaneously to the right stakeholders — each party seeing only what they needed, with full confidentiality maintained between OTC partners.</p>
+          <p>Every transaction automatically populated a centralized Google Sheet, creating a single source of truth that all departments worked from in real time.</p>
+          <p>The informal channels closed. The data discrepancies disappeared. Reconciliation stopped being a multi-day negotiation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="cs-section-title">The Results</h2>
+      <div class="cs-body">
+        <div class="cs-results-table">
+          <div class="cs-results-header">
+            <span>Metric</span>
+            <span>Before</span>
+            <span>After</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Reconciliation meeting length</span>
+            <span>Hours — sometimes days</span>
+            <span class="after">Under 1 hour</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Reconciliation error rate</span>
+            <span>Frequent, cross-departmental</span>
+            <span class="after">99% reduction</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Data source</span>
+            <span>Multiple siloed spreadsheets</span>
+            <span class="after">Single source of truth</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Net profit from upsell/cross-sell</span>
+            <span>—</span>
+            <span class="after">$1.5M+</span>
+          </div>
+          <div class="cs-results-row">
+            <span>Client satisfaction score</span>
+            <span>—</span>
+            <span class="after">100%</span>
+          </div>
+        </div>
+        <p class="cs-closing-bold">$1.5M+ in net profit. Generated by the same data infrastructure that eliminated multi-day reconciliation meetings.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cs-cta-block">
+    <div class="cs-cta-inner">
+      <div class="cs-cta-left">
+        <h2 class="cs-cta-headline">Bad data costs more than you think — in time, in errors, and in growth you're leaving on the table.</h2>
+        <p class="cs-cta-sub">If your team is working from siloed spreadsheets, manual exports, or informal data flows, the problem isn't just operational. It's commercial.</p>
+      </div>
+      <div class="cs-cta-right">
+        <a href={CAL_URL} class="btn-primary" target="_blank" rel="noopener">Book a Discovery Call &nbsp;→</a>
+        <span class="cta-note">No commitment. 30 minutes.</span>
+      </div>
+    </div>
+  </div>
+
+</Layout>
