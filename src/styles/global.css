@@ -1518,49 +1518,6 @@ footer {
 .cs-sidebar-cta a:hover { background: rgba(224,92,75,0.1); border-color: var(--accent); }
 
 /* ═══════════════════════════════════════════════════
-   RESPONSIVE — TABLET  (max-width: 1024px)
-═══════════════════════════════════════════════════ */
-@media (max-width: 1024px) {
-  nav { padding: 18px 32px; }
-
-  .hero { padding: 120px 32px 80px; }
-  .services { padding: 80px 32px; }
-  .case-studies { padding: 80px 32px; }
-  .cta-final { margin: 0 32px 80px; padding: 56px 40px; }
-  footer { padding: 28px 32px; }
-
-  .services-grid { grid-template-columns: repeat(3, 1fr); }
-  .service-card { grid-column: span 1 !important; }
-  .service-card:nth-child(6) { grid-column: span 3 !important; }
-  .service-card-custom { flex-direction: column; gap: 24px; }
-  .service-card-custom .service-custom-right { align-items: flex-start; }
-
-  .cs-grid { grid-template-columns: 1fr; }
-
-  .cs-header { padding: 120px 32px 50px; }
-  .cs-stats-bar { padding: 32px; }
-  .cs-results-summary { padding: 48px 32px; }
-  .cs-two-col { grid-template-columns: 1fr 240px; }
-  .cs-two-col-main { padding: 0 32px; }
-  .cs-two-col-sidebar { padding: 40px 24px; }
-  .cs-cta-block { padding: 0 32px 80px; }
-  .cs-cta-inner { padding: 48px 40px; }
-  .cs-index-card { padding: 40px 32px; }
-
-  .svc-section { padding: 60px 32px; }
-  .svc-row { grid-template-columns: 48px 1fr auto; }
-  .svc-right { display: none; }
-  .faq-section { padding: 60px 32px; }
-
-  .about-hero { padding: 120px 32px 0; grid-template-columns: 1fr 300px; gap: 48px; }
-  .about-body { padding: 60px 32px; }
-  .about-stack-header { padding: 40px 32px 24px; }
-  .about-github { padding: 48px 32px 60px; }
-
-  .page-header { padding: 120px 32px 60px; }
-}
-
-/* ═══════════════════════════════════════════════════
    RESPONSIVE — MOBILE  (max-width: 768px)
 ═══════════════════════════════════════════════════ */
 @media (max-width: 768px) {
@@ -1571,6 +1528,7 @@ footer {
 
   /* ─── HERO ─────────────────────────────────────── */
   .hero { padding: 96px 20px 60px; }
+  .hero-headline br { display: none; }
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn-primary,
   .hero-ctas .btn-secondary { width: 100%; justify-content: center; }
@@ -1581,10 +1539,25 @@ footer {
   /* ─── SERVICES (home) ──────────────────────────── */
   .services { padding: 60px 20px; }
   .section-intro { max-width: 100%; margin-bottom: 36px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .service-card { grid-column: span 1 !important; }
-  .service-card-custom { flex-direction: column; gap: 20px; }
-  .service-card-custom .service-custom-right { align-items: flex-start; width: 100%; }
+  .services-grid { grid-template-columns: 1fr !important; }
+  .service-card,
+  .service-card:nth-child(4),
+  .service-card:nth-child(5),
+  .service-card:nth-child(6) { grid-column: 1 / -1 !important; }
+  .service-card-custom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    height: auto;
+  }
+  .service-card-custom .service-custom-right {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .service-card-custom .service-custom-right .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
 
   /* ─── CASE STUDIES (home) ──────────────────────── */
   .case-studies { padding: 60px 20px; }
