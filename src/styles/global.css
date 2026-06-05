@@ -112,7 +112,7 @@ nav.is-open .nav-hamburger span:nth-child(3) {
   top: 100%;
   left: 0;
   right: 0;
-  background: var(--bg-base);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
   padding: 8px 20px 28px;
 }
