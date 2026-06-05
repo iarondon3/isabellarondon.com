@@ -1517,6 +1517,46 @@ footer {
 .cs-sidebar-cta a:hover { background: rgba(224,92,75,0.1); border-color: var(--accent); }
 
 /* ═══════════════════════════════════════════════════
+   RESPONSIVE — TABLET  (768px – 1023px)
+═══════════════════════════════════════════════════ */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* ─── NAV ──────────────────────────────────────── */
+  nav { padding: 18px 32px; }
+  .nav-links { gap: 24px; }
+  .nav-links li:not(:last-child) { display: list-item; }
+
+  /* ─── HERO ─────────────────────────────────────── */
+  .hero { padding: 110px 40px 72px; }
+  .hero-ctas { flex-direction: row; }
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-secondary { width: auto; }
+
+  /* ─── SERVICES (home) ──────────────────────────── */
+  .services { padding: 72px 40px; }
+
+  /* ─── CASE STUDIES (home) ──────────────────────── */
+  .case-studies { padding: 72px 40px; }
+  .case-studies-header { flex-direction: row; align-items: flex-end; }
+
+  /* ─── CTA FINAL ────────────────────────────────── */
+  .cta-final { margin: 0 40px 72px; padding: 60px 40px; }
+
+  /* ─── FOOTER ───────────────────────────────────── */
+  footer {
+    flex-direction: row;
+    align-items: center;
+    padding: 28px 32px;
+    text-align: left;
+  }
+  .footer-links {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
    RESPONSIVE — MOBILE  (max-width: 768px)
 ═══════════════════════════════════════════════════ */
 @media (max-width: 768px) {
