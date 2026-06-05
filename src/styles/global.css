@@ -1610,9 +1610,28 @@ footer {
     color: var(--text-muted);
     padding-bottom: 4px;
   }
+  .cs-results-row span:nth-child(2)::before {
+    content: 'BEFORE';
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+    opacity: 0.7;
+  }
   .cs-results-row span.after {
     font-size: 14px;
     padding-bottom: 14px;
+  }
+  .cs-results-row span.after::before {
+    content: 'AFTER';
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent-text);
+    margin-bottom: 3px;
   }
 
   /* ─── CS TWO-COL ───────────────────────────────── */
