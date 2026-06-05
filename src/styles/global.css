@@ -76,6 +76,17 @@ nav {
 .nav-cta:hover { background: var(--accent-hover) !important; color: #fff !important; }
 
 /* ─── HAMBURGER / MOBILE NAV ──────────────────────── */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+.nav-overlay.is-open { display: block; }
+
 .nav-hamburger {
   display: none;
   flex-direction: column;

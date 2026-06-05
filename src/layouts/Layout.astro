@@ -58,6 +58,7 @@ const {
 </head>
 <body>
 
+  <div class="nav-overlay"></div>
   <nav>
     <a href="/" class="nav-logo">Isabella Rondon<span>.</span></a>
     <ul class="nav-links">
@@ -99,22 +100,29 @@ const {
     var nav = document.querySelector('nav');
     var hamburger = document.querySelector('.nav-hamburger');
     var mobileMenu = document.querySelector('.nav-mobile-menu');
+    var overlay = document.querySelector('.nav-overlay');
+
+    function closeMenu() {
+      nav.classList.remove('is-open');
+      mobileMenu.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
 
     hamburger.addEventListener('click', function() {
       var isOpen = nav.classList.toggle('is-open');
       mobileMenu.classList.toggle('is-open');
+      overlay.classList.toggle('is-open');
       hamburger.setAttribute('aria-expanded', String(isOpen));
       mobileMenu.setAttribute('aria-hidden', String(!isOpen));
     });
 
     mobileMenu.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        nav.classList.remove('is-open');
-        mobileMenu.classList.remove('is-open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-      });
+      link.addEventListener('click', closeMenu);
     });
+
+    overlay.addEventListener('click', closeMenu);
   </script>
 </body>
 </html>
