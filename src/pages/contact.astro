@@ -162,14 +162,18 @@ import Layout from '../layouts/Layout.astro';
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
 }
+
+.contact-form > * + * { margin-top: 20px; }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 0;
 }
+
+.form-row .form-field + .form-field { margin-left: 16px; }
 
 .form-field {
   display: flex;
@@ -247,9 +251,15 @@ import Layout from '../layouts/Layout.astro';
 }
 .contact-email:hover { color: var(--accent-text); }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact-section { padding: 60px 40px 80px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 767px) {
   .contact-section { padding: 48px 20px 80px; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .form-row { grid-template-columns: 1fr; }
+  .form-row .form-field + .form-field { margin-left: 0; margin-top: 16px; }
 }
 </style>
