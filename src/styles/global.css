@@ -922,8 +922,6 @@ footer {
 .about-photo-wrap {
   position: relative;
   background: #0F0F0F;
-  /* bleed into page padding on right + slight top/bottom overflow */
-  margin: -24px -64px -24px 0;
 }
 .about-photo-wrap::before {
   content: '';
@@ -952,10 +950,10 @@ footer {
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(to bottom, #0F0F0F 0%, transparent 14%, transparent 78%, #0F0F0F 100%),
-    linear-gradient(to left,   transparent 60%, #0F0F0F 100%),
-    linear-gradient(to right,  #0F0F0F 0%, transparent 10%),
-    linear-gradient(to top,    #0F0F0F 0%, transparent 10%);
+    linear-gradient(to bottom, #0F0F0F 0%,   transparent 22%, transparent 72%, #0F0F0F 100%),
+    linear-gradient(to right,  #0F0F0F 0%,   transparent 22%, transparent 100%),
+    linear-gradient(to left,   #0F0F0F 0%,   transparent 22%, transparent 100%),
+    linear-gradient(to top,    #0F0F0F 0%,   transparent 22%, transparent 100%);
 }
 
 .about-body {
