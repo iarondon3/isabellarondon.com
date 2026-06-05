@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <circle cx="64" cy="64" r="64" fill="#0F0F0F"/>
+  <rect width="128" height="128" fill="#0F0F0F"/>
   <text x="22" y="90" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="68" fill="#F0EDE8">I</text>
   <text x="52" y="90" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="68" fill="#E05C4B">R</text>
 </svg>
