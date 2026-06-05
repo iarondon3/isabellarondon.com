@@ -1557,9 +1557,9 @@ footer {
 }
 
 /* ═══════════════════════════════════════════════════
-   RESPONSIVE — MOBILE  (max-width: 768px)
+   RESPONSIVE — MOBILE  (max-width: 767px)
 ═══════════════════════════════════════════════════ */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   /* ─── NAV ──────────────────────────────────────── */
   nav { padding: 16px 20px; }
