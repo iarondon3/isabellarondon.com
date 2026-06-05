@@ -1516,3 +1516,178 @@ footer {
   transition: background 0.2s, border-color 0.2s;
 }
 .cs-sidebar-cta a:hover { background: rgba(224,92,75,0.1); border-color: var(--accent); }
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE — TABLET  (max-width: 1024px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  nav { padding: 18px 32px; }
+
+  .hero { padding: 120px 32px 80px; }
+  .services { padding: 80px 32px; }
+  .case-studies { padding: 80px 32px; }
+  .cta-final { margin: 0 32px 80px; padding: 56px 40px; }
+  footer { padding: 28px 32px; }
+
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .service-card { grid-column: span 1 !important; }
+  .service-card:nth-child(6) { grid-column: span 3 !important; }
+  .service-card-custom { flex-direction: column; gap: 24px; }
+  .service-card-custom .service-custom-right { align-items: flex-start; }
+
+  .cs-grid { grid-template-columns: 1fr; }
+
+  .cs-header { padding: 120px 32px 50px; }
+  .cs-stats-bar { padding: 32px; }
+  .cs-results-summary { padding: 48px 32px; }
+  .cs-two-col { grid-template-columns: 1fr 240px; }
+  .cs-two-col-main { padding: 0 32px; }
+  .cs-two-col-sidebar { padding: 40px 24px; }
+  .cs-cta-block { padding: 0 32px 80px; }
+  .cs-cta-inner { padding: 48px 40px; }
+  .cs-index-card { padding: 40px 32px; }
+
+  .svc-section { padding: 60px 32px; }
+  .svc-row { grid-template-columns: 48px 1fr auto; }
+  .svc-right { display: none; }
+  .faq-section { padding: 60px 32px; }
+
+  .about-hero { padding: 120px 32px 0; grid-template-columns: 1fr 300px; gap: 48px; }
+  .about-body { padding: 60px 32px; }
+  .about-stack-header { padding: 40px 32px 24px; }
+  .about-github { padding: 48px 32px 60px; }
+
+  .page-header { padding: 120px 32px 60px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE — MOBILE  (max-width: 768px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ─── NAV ──────────────────────────────────────── */
+  nav { padding: 16px 20px; }
+  .nav-links li:not(:last-child) { display: none; }
+
+  /* ─── HERO ─────────────────────────────────────── */
+  .hero { padding: 96px 20px 60px; }
+  .hero-ctas { flex-direction: column; }
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-secondary { width: 100%; justify-content: center; }
+
+  /* ─── STACK STRIP ──────────────────────────────── */
+  .stack-item { padding: 0 24px; }
+
+  /* ─── SERVICES (home) ──────────────────────────── */
+  .services { padding: 60px 20px; }
+  .section-intro { max-width: 100%; margin-bottom: 36px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card { grid-column: span 1 !important; }
+  .service-card-custom { flex-direction: column; gap: 20px; }
+  .service-card-custom .service-custom-right { align-items: flex-start; width: 100%; }
+
+  /* ─── CASE STUDIES (home) ──────────────────────── */
+  .case-studies { padding: 60px 20px; }
+  .case-studies-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .cs-grid { grid-template-columns: 1fr; }
+
+  /* ─── CTA FINAL ────────────────────────────────── */
+  .cta-final { flex-direction: column; margin: 0 20px 60px; padding: 40px 24px; gap: 28px; }
+  .cta-final-right { align-items: flex-start; }
+
+  /* ─── FOOTER ───────────────────────────────────── */
+  footer { flex-direction: column; align-items: center; gap: 20px; padding: 32px 20px; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+  /* ─── PAGE HEADER ──────────────────────────────── */
+  .page-header { padding: 96px 20px 48px; }
+
+  /* ─── CS HEADER ────────────────────────────────── */
+  .cs-header { padding: 96px 20px 40px; }
+
+  /* ─── CS STATS BAR ─────────────────────────────── */
+  .cs-stats-bar { flex-direction: column; padding: 32px 20px; gap: 0; }
+  .cs-stat-item { padding: 20px 0; width: 100%; }
+  .cs-stat-item:first-child { padding-top: 0; }
+  .cs-stat-divider { width: 100%; height: 1px; }
+
+  /* ─── CS RESULTS TABLE (card layout on mobile) ─── */
+  .cs-results-summary { padding: 40px 20px; }
+  .cs-results-header { display: none; }
+  .cs-results-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    border-top: 1px solid var(--border);
+  }
+  .cs-results-row span {
+    display: block;
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+  .cs-results-row span:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--bg-surface-2);
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  .cs-results-row span:nth-child(2) {
+    color: var(--text-muted);
+    padding-bottom: 4px;
+  }
+  .cs-results-row span.after {
+    font-size: 14px;
+    padding-bottom: 14px;
+  }
+
+  /* ─── CS TWO-COL ───────────────────────────────── */
+  .cs-two-col { grid-template-columns: 1fr; }
+  .cs-two-col-main { padding: 0 20px; border-right: none; }
+  .cs-two-col-main .cs-section:last-child { border-bottom: 1px solid var(--border); }
+  .cs-two-col-sidebar { position: static; padding: 32px 20px 48px; }
+
+  /* ─── CS CONTENT (legacy wrapper) ─────────────────*/
+  .cs-content { padding: 0 20px; }
+
+  /* ─── CS DECISION ITEM ─────────────────────────── */
+  .cs-decision-item { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
+
+  /* ─── CS CTA BLOCK ─────────────────────────────── */
+  .cs-cta-block { padding: 0 20px 60px; }
+  .cs-cta-inner { flex-direction: column; padding: 36px 24px; gap: 24px; }
+  .cs-cta-right { align-items: flex-start; }
+
+  /* ─── CS INDEX ─────────────────────────────────── */
+  .cs-index-card { padding: 32px 20px; }
+  .cs-index-stats { flex-direction: column; gap: 16px; padding: 20px 0; }
+
+  /* ─── SERVICES PAGE ────────────────────────────── */
+  .svc-section { padding: 48px 20px; }
+  .svc-list { border-radius: 6px; }
+  .svc-row { display: flex; flex-direction: column; }
+  .svc-num { display: none; }
+  .svc-left { padding: 24px 20px 16px; border-right: none; border-bottom: 1px solid var(--border); }
+  .svc-right { padding: 16px 20px; border-right: none; border-bottom: 1px solid var(--border); }
+  .svc-cta-col { padding: 16px 20px 24px; align-items: flex-start; min-width: unset; }
+  .svc-row-custom { flex-direction: column; gap: 16px; padding: 24px 20px; }
+  .svc-custom-left { flex-direction: column; gap: 12px; }
+
+  /* ─── FAQ ──────────────────────────────────────── */
+  .faq-section { padding: 48px 20px; }
+  .faq-inner { grid-template-columns: 1fr; gap: 28px; }
+  .faq-left { position: static; }
+
+  /* ─── ABOUT PAGE ───────────────────────────────── */
+  .about-hero { grid-template-columns: 1fr; padding: 96px 20px 0; gap: 36px; }
+  .about-photo { position: static; }
+  .about-photo-wrap { min-height: 280px; }
+  .about-body { grid-template-columns: 1fr; padding: 40px 20px; gap: 36px; }
+  .about-stack-header { padding: 32px 20px 16px; }
+  .about-github { padding: 36px 20px 56px; }
+  .github-cards { grid-template-columns: 1fr; }
+
+  /* ─── CS DEMO BLOCK ────────────────────────────── */
+  .cs-demo-block { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
