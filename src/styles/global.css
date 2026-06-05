@@ -29,7 +29,9 @@ body {
 /* ─── NAV ─────────────────────────────────────────── */
 nav {
   position: fixed;
-  inset: 0 0 auto 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -1523,8 +1525,8 @@ footer {
 
   /* ─── NAV ──────────────────────────────────────── */
   nav { padding: 18px 32px; }
-  .nav-links { gap: 24px; }
-  .nav-links li:not(:last-child) { display: list-item; }
+  .nav-links { gap: 0; }
+  .nav-links li + li { margin-left: 20px; }
 
   /* ─── HERO ─────────────────────────────────────── */
   .hero { padding: 110px 40px 72px; }
@@ -1551,9 +1553,9 @@ footer {
   }
   .footer-links {
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 20px;
+    gap: 0;
   }
+  .footer-links li + li { margin-left: 16px; }
 }
 
 /* ═══════════════════════════════════════════════════
