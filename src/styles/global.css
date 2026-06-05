@@ -1549,6 +1549,8 @@ footer {
 
   /* ─── CASE STUDY INDEX ─────────────────────────── */
   .cs-index-card + .cs-index-card { border-top: 1px solid var(--border); }
+  .cs-index-stats { gap: 0; }
+  .cs-index-stat + .cs-index-stat { margin-left: 32px; }
 
   /* ─── CASE STUDY HEADER ─────────────────────────── */
   .cs-header { padding: 110px 40px 48px; }
