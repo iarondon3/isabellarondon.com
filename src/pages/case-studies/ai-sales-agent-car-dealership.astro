@@ -16,9 +16,9 @@ const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
       <div class="cs-tag">AI Agent Development</div>
       <h1 class="cs-headline">
         Most people talk about what an AI agent could do.<br>
-        Here's one you can actually talk to.
+        <span style="color: var(--accent-light);">Here's one you can actually talk to.</span>
       </h1>
-      <p class="cs-subheadline">Custom AI agent development built for real business rules — not a generic chatbot. I built a fully functional AI sales agent for a car dealership, complete with live integrations and production-ready architecture. No hallucinations. A working agent that handles what your team handles today, around the clock.</p>
+      <p class="cs-subheadline">I built a fully functional AI sales agent for a car dealership — trained on their real business rules, integrated with their actual systems, and production-ready. Not a demo. Not a template. A working agent.</p>
     </div>
   </header>
 
@@ -26,7 +26,7 @@ const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
   <div class="cs-stats-bar">
     <div class="cs-stat-item">
       <div class="cs-stat-value">24/7</div>
-      <div class="cs-stat-label">availability</div>
+      <div class="cs-stat-label">availability — no staff needed</div>
     </div>
     <div class="cs-stat-divider"></div>
     <div class="cs-stat-item">
@@ -40,75 +40,124 @@ const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
     </div>
   </div>
 
-  <!-- CONTENT -->
-  <div class="cs-content">
-
-    <section class="cs-section">
-      <h2 class="cs-section-title">The Problem</h2>
-      <div class="cs-body">
-        <p>A car dealership's sales cycle doesn't stop at 6pm. Leads come in on weekends, after hours, and during peak seasons when the floor team is overwhelmed. Every unanswered message is a lost opportunity — and hiring more staff to cover every time window doesn't scale.</p>
-        <p>Beyond availability, there was a subtler problem: no visibility into what customers actually wanted when a specific car wasn't in stock. That demand was disappearing into thin air instead of informing inventory and sales strategy.</p>
+  <!-- RESULTS TABLE — proof-first -->
+  <section class="cs-results-summary">
+    <div class="cs-results-summary-label">Without the Agent vs. With the Agent</div>
+    <div class="cs-results-table">
+      <div class="cs-results-header">
+        <span>Situation</span>
+        <span>Without the Agent</span>
+        <span>With the Agent</span>
       </div>
-    </section>
+      <div class="cs-results-row">
+        <span>After-hours leads</span>
+        <span>Lost — no coverage</span>
+        <span class="after">Handled immediately, 24/7</span>
+      </div>
+      <div class="cs-results-row">
+        <span>Inventory &amp; pricing questions</span>
+        <span>Wait for staff availability</span>
+        <span class="after">Answered in real time</span>
+      </div>
+      <div class="cs-results-row">
+        <span>Car not in stock</span>
+        <span>Lead disappears</span>
+        <span class="after">Logged as structured demand data</span>
+      </div>
+      <div class="cs-results-row">
+        <span>Appointment booking</span>
+        <span>Manual — human handoff required</span>
+        <span class="after">Booked directly into database</span>
+      </div>
+      <div class="cs-results-row">
+        <span>Lead qualification</span>
+        <span>Sales team time</span>
+        <span class="after">Silent and automatic</span>
+      </div>
+    </div>
+  </section>
 
-    <section class="cs-section">
-      <h2 class="cs-section-title">The Solution</h2>
-      <div class="cs-body">
-        <p>I designed and built a production-ready AI agent from scratch — trained on the dealership's real business rules, inventory logic, and customer service policies.</p>
+  <!-- TWO-COLUMN: NARRATIVE LEFT · STACK SIDEBAR RIGHT -->
+  <div class="cs-two-col">
 
-        <div class="cs-stack-row">
-          <span class="cs-stack-label">Stack</span>
-          <div class="cs-stack-tags">
-            <span>n8n</span>
-            <span>OpenAI API</span>
-            <span>Anthropic API</span>
-            <span>Structured database integrations</span>
+    <!-- LEFT: narrative -->
+    <div class="cs-two-col-main">
+
+      <section class="cs-section">
+        <h2 class="cs-section-title">The Problem</h2>
+        <div class="cs-body">
+          <p>A car dealership's sales cycle doesn't stop at 6pm. Leads come in on weekends, after hours, and during peak seasons when the floor team is overwhelmed. Every unanswered message is a lost opportunity — and hiring more staff to cover every time window doesn't scale.</p>
+          <p>Beyond availability, there was a subtler problem: no visibility into what customers actually wanted when a specific car wasn't in stock. That demand was disappearing into thin air instead of informing inventory and sales strategy.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2 class="cs-section-title">What the Agent Does</h2>
+        <div class="cs-body">
+          <p>I designed and built a production-ready AI agent from scratch — trained on the dealership's real business rules, inventory logic, and customer service policies.</p>
+
+          <div class="cs-decisions">
+            <div class="cs-decision-title">Five workflows, fully automated</div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-name">Customer service</div>
+              <div class="cs-decision-desc">Answers questions about location, hours, delivery, and inventory in natural, accurate language.</div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-name">Financing offers</div>
+              <div class="cs-decision-desc">If a customer's budget doesn't cover a vehicle, the agent proactively presents financing options and walks them through the process.</div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-name">Appointment scheduling</div>
+              <div class="cs-decision-desc">Books showroom visits directly into a database — no human handoff required.</div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-name">Silent demand capture</div>
+              <div class="cs-decision-desc">When a customer asks for a car that isn't available, the agent logs the request silently. Every unavailable inquiry becomes a demand signal for inventory planning.</div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-name">Smart handoff</div>
+              <div class="cs-decision-desc">When a conversation reaches a decision point that requires a human, the agent transfers cleanly with full context.</div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="cs-decisions">
-          <div class="cs-decision-title">What this AI agent does for the business</div>
-          <div class="cs-decision-item">
-            <div class="cs-decision-name">Customer service</div>
-            <div class="cs-decision-desc">Answers questions about location, hours, delivery, and inventory in natural, accurate language.</div>
-          </div>
-          <div class="cs-decision-item">
-            <div class="cs-decision-name">Financing offers</div>
-            <div class="cs-decision-desc">If a customer's budget doesn't cover a vehicle, the agent proactively presents financing options and walks them through the process.</div>
-          </div>
-          <div class="cs-decision-item">
-            <div class="cs-decision-name">Appointment scheduling</div>
-            <div class="cs-decision-desc">Books showroom visits directly into a database — no human handoff required.</div>
-          </div>
-          <div class="cs-decision-item">
-            <div class="cs-decision-name">Silent demand capture</div>
-            <div class="cs-decision-desc">When a customer asks for a car that isn't available, the agent logs the request silently in a structured database. Every unavailable inquiry becomes a demand signal for inventory planning.</div>
-          </div>
-          <div class="cs-decision-item">
-            <div class="cs-decision-name">Smart handoff</div>
-            <div class="cs-decision-desc">When a conversation reaches a decision point that requires a human, the agent transfers cleanly with full context.</div>
+      <section class="cs-section">
+        <h2 class="cs-section-title">See It For Yourself</h2>
+        <div class="cs-body">
+          <p>Talk to it — it handles real conversations with real business rules.</p>
+          <div class="cs-demo-block">
+            <span class="cs-demo-label">Live demo</span>
+            <span class="cs-demo-coming">Coming soon</span>
           </div>
         </div>
+      </section>
 
-        <p>The agent was demonstrated to the dealership's team fully operational — handling real conversations, applying real business rules, producing zero hallucinations across all test scenarios.</p>
-      </div>
-    </section>
+    </div>
 
-    <section class="cs-section">
-      <h2 class="cs-section-title">See It For Yourself</h2>
-      <div class="cs-body">
-        <p>This isn't a mockup or a slide deck. It's a working agent — built on real business rules, tested against real conversations, with zero hallucinations across all scenarios.</p>
-        <p>The fastest way to understand what I can build for your business is to talk to this one.</p>
-        <div class="cs-demo-block">
-          <span class="cs-demo-label">Live demo</span>
-          <span class="cs-demo-coming">Coming soon</span>
+    <!-- RIGHT: sticky sidebar -->
+    <div class="cs-two-col-sidebar">
+
+      <div class="cs-sidebar-card">
+        <div class="cs-sidebar-label">Stack Used</div>
+        <div class="cs-sidebar-tags">
+          <span>n8n</span>
+          <span>OpenAI API</span>
+          <span>Anthropic API</span>
+          <span>Database integrations</span>
         </div>
       </div>
-    </section>
+
+      <div class="cs-sidebar-cta">
+        <p>Want this built around your business rules — not a generic template?</p>
+        <a href={CAL_URL} target="_blank" rel="noopener">Book a call →</a>
+      </div>
+
+    </div>
 
   </div>
 
-  <!-- CTA -->
+  <!-- CTA BLOCK -->
   <div class="cs-cta-block">
     <div class="cs-cta-inner">
       <div class="cs-cta-left">
