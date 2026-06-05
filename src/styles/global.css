@@ -950,10 +950,10 @@ footer {
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(to bottom, #0F0F0F 0%, transparent 18%, transparent 58%, #0F0F0F 100%),
-    linear-gradient(to left,   transparent 55%, #0F0F0F 100%),
-    linear-gradient(to right,  #0F0F0F 0%, transparent 18%),
-    linear-gradient(to top,    #0F0F0F 0%, transparent 18%);
+    linear-gradient(to bottom, #0F0F0F 0%,   transparent 22%, transparent 72%, #0F0F0F 100%),
+    linear-gradient(to right,  #0F0F0F 0%,   transparent 22%, transparent 100%),
+    linear-gradient(to left,   #0F0F0F 0%,   transparent 22%, transparent 100%),
+    linear-gradient(to top,    #0F0F0F 0%,   transparent 22%, transparent 100%);
 }
 
 .about-body {
