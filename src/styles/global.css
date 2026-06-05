@@ -1530,7 +1530,7 @@ footer {
   .nav-links li + li { margin-left: 20px; }
 
   /* ─── HERO ─────────────────────────────────────── */
-  .hero { padding: 110px 40px 72px; }
+  .hero { padding: 110px 40px 72px; min-height: 0; }
   .hero-ctas { flex-direction: row; }
   .hero-ctas .btn-primary,
   .hero-ctas .btn-secondary { width: auto; }
