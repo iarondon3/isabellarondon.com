@@ -246,4 +246,10 @@ import Layout from '../layouts/Layout.astro';
   margin-top: 8px;
 }
 .contact-email:hover { color: var(--accent-text); }
+
+@media (max-width: 768px) {
+  .contact-section { padding: 48px 20px 80px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; }
+}
 </style>
