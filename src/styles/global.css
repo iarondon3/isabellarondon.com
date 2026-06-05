@@ -1541,6 +1541,9 @@ footer {
   .case-studies { padding: 72px 40px; }
   .case-studies-header { flex-direction: row; align-items: flex-end; }
 
+  /* ─── CASE STUDY INDEX ─────────────────────────── */
+  .cs-index-card + .cs-index-card { border-top: 1px solid var(--border); }
+
   /* ─── CTA FINAL ────────────────────────────────── */
   .cta-final { margin: 0 40px 72px; padding: 60px 40px; }
 
