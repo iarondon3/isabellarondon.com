@@ -1531,6 +1531,7 @@ footer {
 
   /* ─── HERO ─────────────────────────────────────── */
   .hero { padding: 110px 40px 72px; min-height: 0; }
+  .hero-headline { font-size: 52px; }
   .hero-ctas { flex-direction: row; }
   .hero-ctas .btn-primary,
   .hero-ctas .btn-secondary { width: auto; }
