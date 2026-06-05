@@ -66,6 +66,20 @@ const {
       <li><a href="/about">About</a></li>
       <li><a href="/contact" class="nav-cta">Book a Call</a></li>
     </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-mobile-menu" aria-hidden="true">
+      <ul class="nav-mobile-links">
+        <li><a href="/services">Services</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <a href="/contact" class="btn-primary nav-mobile-cta">Book a Discovery Call &nbsp;→</a>
+    </div>
   </nav>
 
   <slot />
@@ -81,5 +95,26 @@ const {
     <span class="footer-copy">© 2026 Isabella Rondon</span>
   </footer>
 
+  <script>
+    var nav = document.querySelector('nav');
+    var hamburger = document.querySelector('.nav-hamburger');
+    var mobileMenu = document.querySelector('.nav-mobile-menu');
+
+    hamburger.addEventListener('click', function() {
+      var isOpen = nav.classList.toggle('is-open');
+      mobileMenu.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        nav.classList.remove('is-open');
+        mobileMenu.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+      });
+    });
+  </script>
 </body>
 </html>
