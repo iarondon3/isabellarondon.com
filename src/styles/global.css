@@ -1452,6 +1452,7 @@ footer {
   border-bottom: none;
 }
 .cs-two-col-sidebar {
+  position: -webkit-sticky;
   position: sticky;
   top: 100px;
   align-self: start;
@@ -1543,6 +1544,10 @@ footer {
 
   /* ─── CASE STUDY INDEX ─────────────────────────── */
   .cs-index-card + .cs-index-card { border-top: 1px solid var(--border); }
+
+  /* ─── CASE STUDY HEADER ─────────────────────────── */
+  .cs-header { padding: 110px 40px 48px; }
+  .cs-headline { font-size: 36px; }
 
   /* ─── CTA FINAL ────────────────────────────────── */
   .cta-final { margin: 0 40px 72px; padding: 60px 40px; }
