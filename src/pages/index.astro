@@ -25,19 +25,18 @@ const stackItems = [
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge">For Seed &amp; Series A Startups</div>
-      <div class="hero-eyebrow">
-        Your startup is drowning in data and starving for insights.
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        For Seed &amp; Series A Startups
       </div>
       <h1 class="hero-headline">
-        Turn your data into<br>
-        decisions <span class="accent-light">that scale.</span>
+        Most data analysts start with your data.<br>
+        <span class="accent-light">I start with your business.</span>
       </h1>
       <p class="hero-subheadline">
-        I'm a freelance data analyst for early-stage startups. I build the data
-        foundations founders actually need — automated pipelines, financial
-        dashboards, and AI-powered automation. Backed by 5 years driving data
-        strategy at a B2B financial services company.
+        I'm a <strong>business economist</strong> and <strong>freelance data analyst</strong> — I translate
+        <strong>your business challenges</strong> into the infrastructure that answers
+        <strong>the questions that actually matter.</strong>
       </p>
       <div class="hero-ctas">
         <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="btn-primary" target="_blank" rel="noopener">
@@ -45,25 +44,33 @@ const stackItems = [
         </a>
         <a href="/case-studies" class="btn-secondary">See My Work &nbsp;→</a>
       </div>
+      <p class="hero-trust">
+        Backed by 5 years reconciling financial data for 400+ corporate clients — with automated workflows reaching 99% accuracy.
+      </p>
     </div>
   </section>
 
   <!-- STACK STRIP -->
+  <div class="stack-label-wrap">
+    <div class="section-label">The toolkit behind it</div>
+  </div>
   <div class="stack-strip">
-    <div class="stack-track">
-      {[...stackItems, ...stackItems].map(({ icon, label }) => (
-        <div class="stack-item">
-          <img src={icon} alt="" width="36" height="36" />
-          <span>{label}</span>
-        </div>
-      ))}
+    <div class="stack-track-wrap">
+      <div class="stack-track">
+        {[...stackItems, ...stackItems].map(({ icon, label }) => (
+          <div class="stack-item">
+            <img src={icon} alt="" width="36" height="36" />
+            <span>{label}</span>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 
   <!-- SERVICES -->
   <section class="services" id="services">
     <div class="section-label">Services</div>
-    <h2 class="section-title">Data Services for Early-Stage Startups</h2>
+    <h2 class="section-title">Data Services</h2>
     <p class="section-intro">
       Productized services with fixed scope and defined deliverables —
       clear output, clear timeline.
@@ -162,7 +169,7 @@ const stackItems = [
     <div class="case-studies-header">
       <div class="case-studies-header-left">
         <div class="section-label">Case Studies</div>
-        <h2 class="section-title">Real Projects. Real Results.</h2>
+        <h2 class="section-title">What Changes When the Data Works</h2>
       </div>
       <a href="/case-studies" class="view-all">View all case studies &nbsp;→</a>
     </div>
@@ -183,11 +190,11 @@ const stackItems = [
       <a href="/case-studies/financial-data-strategy" class="cs-card">
         <div class="cs-service-tag">Data Strategy · Workflow Automation</div>
         <div class="cs-headline">
-          Days of reconciliation. Departments working from different numbers. I built the infrastructure that replaced all of it.
+          Days of cross-departmental reconciliation, full of manual errors, across 400+ corporate clients. I built the infrastructure that replaced it.
         </div>
         <div class="cs-stat">
-          <div class="cs-stat-value">Days → &lt;1hr</div>
-          <div class="cs-stat-label">reconciliation time</div>
+          <div class="cs-stat-value">99%</div>
+          <div class="cs-stat-label">reduction in reconciliation errors</div>
         </div>
         <div class="cs-link">Read case study →</div>
       </a>
@@ -195,11 +202,11 @@ const stackItems = [
       <a href="/case-studies/ai-sales-agent-car-dealership" class="cs-card">
         <div class="cs-service-tag">AI Agent Development</div>
         <div class="cs-headline">
-          Most people talk about what an AI agent could do. Here's one you can actually talk to.
+          Most people talk about what an AI agent could do. Here's how this one talks to customers.
         </div>
         <div class="cs-stat">
           <div class="cs-stat-value">24/7</div>
-          <div class="cs-stat-label">availability · 0 hallucinations in testing</div>
+          <div class="cs-stat-label">availability — no staff needed</div>
         </div>
         <div class="cs-link">Read case study →</div>
       </a>
@@ -220,7 +227,7 @@ const stackItems = [
     </div>
     <div class="cta-final-right">
       <a href="https://cal.com/isabella-rondon-jrkvbh/30min" class="btn-primary" target="_blank" rel="noopener">
-        Book a Discovery Call &nbsp;→
+        Let's Build It &nbsp;→
       </a>
       <span class="cta-note">No commitment. 30 minutes.</span>
     </div>
