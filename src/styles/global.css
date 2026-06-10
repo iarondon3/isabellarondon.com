@@ -1496,7 +1496,7 @@ footer {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 260px;
+  max-width: 300px;
   background: linear-gradient(160deg, #232323, #161616);
   border: 1px solid var(--border-hover);
   border-radius: 34px;
@@ -1971,7 +1971,7 @@ footer {
   /* ─── SEE IT FOR YOURSELF — phone mockup ─────────── */
   .cs-demo-wrap { grid-template-columns: 1fr; justify-items: center; gap: 28px; }
   .cs-demo-points { text-align: left; max-width: 480px; margin: 0 auto; width: 100%; }
-  .phone-frame { max-width: 280px; }
+  .phone-frame { max-width: 320px; }
 }
 
 /* ═══════════════════════════════════════════════════
@@ -1982,5 +1982,5 @@ footer {
 @media (min-width: 768px) and (max-width: 1023px) {
   .cs-demo-wrap { grid-template-columns: 1fr; justify-items: center; gap: 28px; }
   .cs-demo-points { text-align: left; max-width: 480px; margin: 0 auto; width: 100%; }
-  .phone-frame { max-width: 300px; }
+  .phone-frame { max-width: 340px; }
 }
