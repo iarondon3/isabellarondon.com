@@ -1363,11 +1363,35 @@ footer {
   font-size: 14px;
   font-weight: 600;
   color: var(--text-primary);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 .cs-decision-desc {
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.65;
+}
+
+/* Row/decision icons — used in results table and key design decisions */
+.cs-metric {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cs-row-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--accent-text);
+}
+.cs-row-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.cs-decision-name .cs-row-icon {
+  margin-top: 1px;
 }
 
 .cs-solution-block { margin-bottom: 0; }
@@ -1786,6 +1810,9 @@ footer {
   .cs-header { padding: 110px 40px 48px; }
   .cs-headline { font-size: 36px; }
 
+  /* ─── CS DECISION ITEM (avoid cramped description column) ─── */
+  .cs-decision-item { grid-template-columns: 1fr; gap: 6px; }
+
   /* ─── CTA FINAL ────────────────────────────────── */
   .cta-final { margin: 0 40px 72px; padding: 60px 40px; }
 
@@ -1881,23 +1908,28 @@ footer {
     padding: 0;
     border-top: 1px solid var(--border);
   }
-  .cs-results-row span {
+  .cs-results-row > span {
     display: block;
     padding: 6px 16px;
     font-size: 13px;
   }
-  .cs-results-row span:first-child {
+  .cs-results-row > span:first-child {
     font-weight: 600;
     color: var(--text-primary);
     background: var(--bg-surface-2);
     padding: 10px 16px;
     font-size: 13px;
   }
-  .cs-results-row span:nth-child(2) {
+  .cs-results-row > span.cs-metric:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .cs-results-row > span:nth-child(2) {
     color: var(--text-muted);
     padding-bottom: 4px;
   }
-  .cs-results-row span:nth-child(2)::before {
+  .cs-results-row > span:nth-child(2)::before {
     content: 'BEFORE';
     display: block;
     font-size: 9px;
@@ -1907,11 +1939,11 @@ footer {
     margin-bottom: 3px;
     opacity: 0.7;
   }
-  .cs-results-row span.after {
+  .cs-results-row > span.after {
     font-size: 14px;
     padding-bottom: 14px;
   }
-  .cs-results-row span.after::before {
+  .cs-results-row > span.after::before {
     content: 'AFTER';
     display: block;
     font-size: 9px;
