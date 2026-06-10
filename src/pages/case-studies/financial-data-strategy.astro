@@ -50,22 +50,22 @@ const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
         <span>After</span>
       </div>
       <div class="cs-results-row">
-        <span>Reconciliation time</span>
+        <span class="cs-metric"><span class="cs-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Reconciliation time</span>
         <span>Hours — sometimes days</span>
         <span class="after">Under 1 hour</span>
       </div>
       <div class="cs-results-row">
-        <span>Reconciliation error rate</span>
+        <span class="cs-metric"><span class="cs-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>Reconciliation error rate</span>
         <span>Frequent, cross-departmental</span>
         <span class="after">99% reduction</span>
       </div>
       <div class="cs-results-row">
-        <span>Data latency</span>
+        <span class="cs-metric"><span class="cs-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span>Data latency</span>
         <span>Manual exports, days old</span>
         <span class="after">Real-time, automated</span>
       </div>
       <div class="cs-results-row">
-        <span>Data source</span>
+        <span class="cs-metric"><span class="cs-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>Data source</span>
         <span>Four teams, four spreadsheets</span>
         <span class="after">One source of truth</span>
       </div>
@@ -91,8 +91,23 @@ const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
       <section class="cs-section">
         <h2 class="cs-section-title">The Solution</h2>
         <div class="cs-body">
-          <p>I built an automated workflow that replaced the informal messaging chain entirely. When a transaction came in, the relevant information was routed simultaneously to the right stakeholders — each party seeing only what they needed, with full confidentiality maintained between OTC partners. Every transaction automatically populated a centralized Google Sheet: one source of truth, all departments, real time.</p>
-          <p>The informal channels closed. The data discrepancies disappeared. Reconciliation stopped being a multi-day negotiation.</p>
+          <p>I built an automated workflow that replaced the informal messaging chain entirely. The informal channels closed, the data discrepancies disappeared, and reconciliation stopped being a multi-day negotiation.</p>
+
+          <div class="cs-decisions">
+            <div class="cs-decision-title">Key design decisions</div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-name"><span class="cs-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></span>Multi-party routing</div>
+              <div class="cs-decision-desc">When a transaction came in, the relevant information was routed simultaneously to the right stakeholders — operations, finance, and the OTC provider — with no manual handoffs.</div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-name"><span class="cs-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>Confidentiality between parties (RBAC)</div>
+              <div class="cs-decision-desc">Each party saw only what they needed, with full confidentiality maintained between OTC partners.</div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-name"><span class="cs-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>Real-time sync to single source of truth</div>
+              <div class="cs-decision-desc">Every transaction automatically populated a centralized Google Sheet — one source of truth, all departments, real time.</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -113,7 +128,7 @@ const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
 
       <div class="cs-sidebar-cta">
         <p>Running critical operations on scattered data and informal channels?</p>
-        <a href={CAL_URL} target="_blank" rel="noopener">Book a call →</a>
+        <a href={CAL_URL} target="_blank" rel="noopener">See if this fits your team →</a>
       </div>
 
     </div>
