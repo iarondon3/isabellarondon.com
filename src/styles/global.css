@@ -1432,7 +1432,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 260px;
   gap: 40px;
-  align-items: center;
+  align-items: start;
   margin-top: 28px;
 }
 .cs-demo-copy .cs-demo-tag {
@@ -1456,6 +1456,29 @@ footer {
   70%  { box-shadow: 0 0 0 8px rgba(224,92,75,0); }
   100% { box-shadow: 0 0 0 0 rgba(224,92,75,0); }
 }
+.cs-demo-points {
+  list-style: none;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cs-demo-points li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.cs-demo-points li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 7px;
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.cs-demo-points strong { color: var(--text-primary); font-weight: 600; }
 
 .phone-stage {
   position: relative;
@@ -1948,6 +1971,7 @@ footer {
 
   /* ─── SEE IT FOR YOURSELF — phone mockup ─────────── */
   .cs-demo-wrap { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
+  .cs-demo-copy { text-align: left; max-width: 480px; margin: 0 auto; }
   .phone-frame { max-width: 280px; }
 }
 
@@ -1958,5 +1982,6 @@ footer {
 ═══════════════════════════════════════════════════ */
 @media (min-width: 768px) and (max-width: 1023px) {
   .cs-demo-wrap { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
+  .cs-demo-copy { text-align: left; max-width: 480px; margin: 0 auto; }
   .phone-frame { max-width: 300px; }
 }
