@@ -1427,27 +1427,152 @@ footer {
   margin-top: 16px;
 }
 
-.cs-demo-block {
-  display: flex;
+/* ─── SEE IT FOR YOURSELF — phone mockup ──────────── */
+.cs-demo-wrap {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 40px;
   align-items: center;
-  gap: 16px;
   margin-top: 28px;
-  padding: 20px 24px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 6px;
 }
-.cs-demo-label {
+.cs-demo-copy .cs-demo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--accent-text);
+  margin-bottom: 14px;
 }
-.cs-demo-coming {
-  font-size: 13px;
+.cs-demo-tag .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent);
+  animation: cs-demo-pulse 2s infinite;
+}
+@keyframes cs-demo-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(224,92,75,0.5); }
+  70%  { box-shadow: 0 0 0 8px rgba(224,92,75,0); }
+  100% { box-shadow: 0 0 0 0 rgba(224,92,75,0); }
+}
+
+.phone-stage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+.phone-glow {
+  position: absolute;
+  inset: -20% -10%;
+  background: radial-gradient(circle at 50% 30%, rgba(224,92,75,0.18), transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+.phone-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 260px;
+  background: linear-gradient(160deg, #232323, #161616);
+  border: 1px solid var(--border-hover);
+  border-radius: 34px;
+  padding: 10px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+}
+.phone-notch {
+  position: absolute;
+  top: 10px; left: 50%;
+  transform: translateX(-50%);
+  width: 90px; height: 18px;
+  background: #161616;
+  border-radius: 0 0 14px 14px;
+  z-index: 2;
+}
+.phone-screen {
+  background: var(--bg);
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 14px 12px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+}
+.chat-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+  flex-shrink: 0;
+}
+.chat-id { line-height: 1.3; }
+.chat-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.chat-status { font-size: 10px; color: var(--accent-text); display: flex; align-items: center; gap: 5px; }
+.chat-status .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+.chat-body {
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 360px;
+}
+.bubble {
+  max-width: 82%;
+  padding: 8px 12px;
+  border-radius: 14px;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+.bubble-in {
+  background: var(--bg-surface-2);
+  color: var(--text-primary);
+  border-radius: 4px 14px 14px 14px;
+}
+.bubble-out {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 14px 4px 14px 14px;
+}
+.bubble-time {
+  font-size: 9px;
   color: var(--text-muted);
-  font-style: italic;
+  margin-top: 2px;
+  text-align: right;
+}
+.bubble-out .bubble-time { color: rgba(255,255,255,0.65); }
+.bubble-row { display: flex; flex-direction: column; }
+.bubble-row.out { align-items: flex-end; }
+.bubble-row.in { align-items: flex-start; }
+
+.chat-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+.chat-input-fake {
+  flex: 1;
+  height: 26px;
+  border-radius: 13px;
+  background: var(--bg-surface-2);
+}
+.chat-send {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
 }
 
 .cs-cta-block {
@@ -1821,6 +1946,17 @@ footer {
   .about-github { padding: 36px 20px 56px; }
   .github-cards { grid-template-columns: 1fr; }
 
-  /* ─── CS DEMO BLOCK ────────────────────────────── */
-  .cs-demo-block { flex-direction: column; align-items: flex-start; gap: 10px; }
+  /* ─── SEE IT FOR YOURSELF — phone mockup ─────────── */
+  .cs-demo-wrap { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
+  .phone-frame { max-width: 280px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE — TABLET (768px–1023px): stack the
+   "See It For Yourself" phone mockup below the copy,
+   since the two-col layout leaves little room beside it
+═══════════════════════════════════════════════════ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cs-demo-wrap { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
+  .phone-frame { max-width: 300px; }
 }
