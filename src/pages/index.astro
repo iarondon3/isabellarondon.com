@@ -22,6 +22,21 @@ const stackItems = [
   description="Isabella Rondon is a freelance data analyst helping early-stage startups build data pipelines, dashboards, and AI automation. Based in the US."
 >
 
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Isabella Rondon",
+    "url": "https://isabellarondon.com",
+    "image": "https://isabellarondon.com/og-image.png",
+    "description": "Freelance data analyst helping early-stage startups build data pipelines, dashboards, and AI automation.",
+    "areaServed": "US",
+    "founder": {
+      "@type": "Person",
+      "name": "Isabella Rondon",
+      "jobTitle": "Freelance Data Analyst"
+    }
+  })} />
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">

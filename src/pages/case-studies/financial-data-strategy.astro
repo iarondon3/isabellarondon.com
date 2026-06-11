@@ -9,6 +9,16 @@ const CAL_URL = "https://cal.com/isabella-rondon-jrkvbh/30min";
   description="I rebuilt how a B2B financial services company managed reconciliation and client data — eliminating multi-day meetings, cutting errors 99%, and creating a single source of truth across four departments."
 >
 
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://isabellarondon.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://isabellarondon.com/case-studies/" },
+      { "@type": "ListItem", "position": 3, "name": "Data Strategy & Workflow Automation", "item": "https://isabellarondon.com/case-studies/financial-data-strategy/" }
+    ]
+  })} />
+
   <!-- CASE STUDY HEADER -->
   <header class="cs-header">
     <div class="cs-header-inner">

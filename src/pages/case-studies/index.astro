@@ -7,6 +7,15 @@ import Layout from '../../layouts/Layout.astro';
   description="Real projects. Real results. See how Isabella Rondon built financial data pipelines on GCP, automated QuickBooks reporting with Python, and developed custom AI agents for US-based businesses."
 >
 
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://isabellarondon.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://isabellarondon.com/case-studies/" }
+    ]
+  })} />
+
   <!-- PAGE HEADER -->
   <header class="page-header">
     <div class="page-header-inner">
